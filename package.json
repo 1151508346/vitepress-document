@@ -6,11 +6,11 @@
         "vitepress": "1.0.0-alpha.4"
     },
     "scripts": {
-        "docs:dev": "vitepress dev docs --port 8888",
+        "docs:dev": "vitepress dev src --port 8888",
         "start": "npm run docs:dev",
-        "build": "vitepress build docs",
-        "docs:build": "vitepress build docs",
-        "docs:serve": "vitepress serve docs"
+        "build": "vitepress build src && mv src/.vitepress/dist ./docs",
+        "docs:build": "vitepress build src",
+        "docs:serve": "vitepress serve src"
     },
     "dependencies": {
         "pdfjs-dist": "^2.0.943"
