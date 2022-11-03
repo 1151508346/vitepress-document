@@ -39,8 +39,8 @@ module.exports = [
       text: '算法',
       link: '/guide/algorithm.md'
     },
-    {
-      text: '学习资料',
-      link: '/guide/nav-address-study.md'
-    }
+    // {
+    //   text: '学习资料',
+    //   link: '/guide/nav-address-study.md'
+    // }
   ]
