@@ -68,7 +68,7 @@ console.dir(r,{depth:100})
 ```js
 const isSomeTree = (p, q) => {
     if (p == null && q == null) return true;
-    if (p == null && q == null) return false;
+    if (p == null || q == null) return false;
     if (p.val !== q.val) return false;
     const lF = isSomeTree(p.left, q.left);
     const rF = isSomeTree(p.right, q.right);
