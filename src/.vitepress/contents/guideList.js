@@ -39,6 +39,10 @@ module.exports = [
       text: '算法',
       link: '/guide/algorithm.md'
     },
+    {
+      text:'20个工具函数',
+      link:'/guide/20-utils.md'
+    }
     // {
     //   text: '学习资料',
     //   link: '/guide/nav-address-study.md'
