@@ -42,6 +42,10 @@ module.exports = [
     {
       text:'20个工具函数',
       link:'/guide/20-utils.md'
+    },
+    {
+      text:'ReactRouter6快速上手',
+      link:'/guide/ReactRouter6快速上手.md'
     }
     // {
     //   text: '学习资料',
