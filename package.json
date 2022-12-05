@@ -8,6 +8,7 @@
     "scripts": {
         "docs:dev": "vitepress dev src --port 8888",
         "start": "npm run docs:dev",
+        "build:netlify": "rm -rf netlifyBuild && vitepress build src -b  && mv src/.vitepress/dist ./netlifyBuild",
         "build": "rm -rf docs && vitepress build src && mv src/.vitepress/dist ./docs",
         "docs:build": "vitepress build src",
         "docs:serve": "vitepress serve src"
