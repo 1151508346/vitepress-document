@@ -19,9 +19,18 @@ const logoPath = (logo) => {
 
   return filePath;
 }
+const args = process.argv
+const getBase = () => {
+  const baseIndex = args.indexOf('-b')
+  if(baseIndex !== -1){
+    return args[baseIndex + 1] ? `/${args[baseIndex + 1]}/` : '/'
+  }
+  return ''
+}
+console.log( getBase(),'getBase()')
 export default {
   title: '首页',
-  base: '/vitepress-document/',
+  base: getBase() || '/vitepress-document/',
   description: '这是一个联系vitePress的文档',
   themeConfig: {
     search: true,
