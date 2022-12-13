@@ -22,12 +22,12 @@ const logoPath = (logo) => {
 const args = process.argv
 const getBase = () => {
   const baseIndex = args.indexOf('-b')
-  if(baseIndex !== -1){
+  if (baseIndex !== -1) {
     return args[baseIndex + 1] ? `/${args[baseIndex + 1]}/` : '/'
   }
   return ''
 }
-console.log( getBase(),'getBase()')
+console.log(getBase(), 'getBase()')
 export default {
   title: '首页',
   base: getBase() || '/vitepress-document/',
@@ -61,6 +61,10 @@ export default {
         link: '/guide/installation',
       },
       {
+        text: '项目搭建',
+        link: '/projects/vite_vue2.md'
+      },
+      {
         text: '面试题',
         items: [
           { text: '混乱的', link: '/mianshi/hunluan/quiteStart' },
@@ -83,6 +87,20 @@ export default {
           items: guideList,
         }
       ],
+
+      '/projects/': [
+        {
+          text: '项目搭建',
+          collapsible: true,
+          items: [
+            {
+              text: 'vite+vue2环境搭建',
+              link: '/projects/vite_vue2.md'
+            },
+            
+          ],
+          }
+      ],
       '/mianshi/hunluan/': [
         {
           text: '面试题/混乱',
@@ -90,7 +108,7 @@ export default {
           items: mianshihunluanList,
         }
       ],
-      
+
       '/mianshi/interviewer/': [
         {
           text: '面试题/前端面试八股文',
