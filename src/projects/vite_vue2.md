@@ -245,14 +245,20 @@ reactive(foo) === foo
 
 ## vue2.6.x+vite 搭建
 > vue2.6.x和vue2.7.x所使用的插件不一样 ，同时按照的vue-template-compiler 模板编译的插件版本要保持一致
+> 
 > 目前vue2.6.x版本最新是2.6.14 
-> npm install vue@2.6.14 vue-template-compiler@2.6.14 
+> 
+> npm install vue@2.6.14 vue-template-compiler@2.6.14 -S
+
 package.json 
 ```json
 "dependencies": {
     "vue": "^2.6.14",
     "vue-template-compiler": "^2.6.14",
   },
+```
+```cmd
+npm install vue@2.6.14 vue-template-compiler@2.6.14 -D
 ```
 vite.config.js
 
