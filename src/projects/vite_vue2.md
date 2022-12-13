@@ -129,9 +129,10 @@ new Vue({
   pinia,
 })
 ```
-> 如果项目中没有使用pinia而使用的是vuex的话 会存在一些问题
+> 如果项目中没有使用pinia而使用的是vuex的话 会存在一些问题。
 - 在vue3 中vuex 在4.x版本提供了 useStore 的方法可以在setup中获取到store 对象。
 - 但是在vue2 中，vuex 并没有类似的方法。并且在setup 并不能直接使用mapActions, mapGetters, mapState 等方法。
+
 **之前的处理**
 ```js
 computed:{
@@ -142,7 +143,9 @@ methods:{
 }
 ```
 在后续的使用中直接 this.stateName 或this.actionName 。
+
 **在2.7中的处理**
+
 直接在页面中 引入全局的 store 对象
 ```js
 import store from '@/store/index';
