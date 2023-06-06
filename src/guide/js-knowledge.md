@@ -1533,4 +1533,44 @@ function stringify(obj) {
 //   var str = '{"name":"zs","age":100,"arr":[1,2,4,"a",{"a":1}]}';
 ```
 
+## 59 根据id查找所在的所有父路径
+```js
+ const data = [
+  {
+    id: 1,
+    name: '1',
+    children: [
+      {
+        id: 11,
+        name: '11',
+        children: [
+          { id: 111, name: '111'}
+        ]
+      }
+    ]
+  },
+  { id: 2,name: '2' },
+  { id: 3, name: '3' },
+]
+// 查找指定id所在的父路径
+const searchIdWithParentPath = (list: any, id: number, target: any[] = []): any => {
+  for (let i = 0; i < list.length; i++) {
+    const item = list[i];
+    if (item.id === id) {
+      target.push({ id: item.id, name: item.name })
+      return target
+    }
+    if (item.children) {
+      let r:any[] = searchIdWithParentPath(item.children, id,target)
+      console.log(target)
+      if (r.length) {
+        target.push({ id: item.id, name: item.name })
+      }
+      return target;
+    }
+  }
+  return target;
+}
 
+const r: any = searchIdWithParentPath(data, 111);
+```
