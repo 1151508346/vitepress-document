@@ -1562,7 +1562,6 @@ const searchIdWithParentPath = (list: any, id: number, target: any[] = []): any 
     }
     if (item.children) {
       let r:any[] = searchIdWithParentPath(item.children, id,target)
-      console.log(target)
       if (r.length) {
         target.push({ id: item.id, name: item.name })
       }
