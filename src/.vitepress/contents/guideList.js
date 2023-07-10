@@ -51,10 +51,13 @@ module.exports = [
       text:'cordova打包前端项目',
       link:'/guide/cordova-build-doc/cordova打包前端.md'
     },
-    
     {
       text:'vue 代码编辑器案例',
       link:'/guide/code-edit.md'
+    },
+    {
+      text:'遇到的问题解决方案',
+      link:'/guide/遇到的问题解决方案.md'
     }
     // {
     //   text: '学习资料',
