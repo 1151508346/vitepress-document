@@ -57,7 +57,6 @@ const log = console.log
 // Codemirror EditorView instance ref
 const view = shallowRef()
 const handleReady = (payload) => {
-  console.log(payload, 'payload==========================')
   view.value = payload.view
 }
 
