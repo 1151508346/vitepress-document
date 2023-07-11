@@ -1,0 +1,1 @@
+import{_ as s,c as n,o as a,a as l}from"./app.87aa9e44.js";const i=JSON.parse('{"title":"\u4EE3\u7801\u7F16\u8F91\u5668\u6848\u4F8B","description":"","frontmatter":{},"headers":[],"relativePath":"guide/code-edit.md"}'),o={name:"guide/code-edit.md"},p=l("",3),e=[p];function t(c,r,y,D,F,A){return a(),n("div",null,e)}var d=s(o,[["render",t]]);export{i as __pageData,d as default};

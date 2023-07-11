@@ -49,7 +49,7 @@ module.exports = [
     },
     {
       text:'cordova打包前端项目',
-      link:'/guide/cordova-build-doc/cordova打包前端.md'
+      link:'/guide/cordova打包前端.md'
     },
     {
       text:'vue 代码编辑器案例',
