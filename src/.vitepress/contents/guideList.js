@@ -58,7 +58,13 @@ module.exports = [
     {
       text:'遇到的问题解决方案',
       link:'/guide/遇到的问题解决方案.md'
-    }
+    },
+    {
+      text:'简易版axios',
+      link:'/guide/simple-axios.md'
+    },
+    
+    
     // {
     //   text: '学习资料',
     //   link: '/guide/nav-address-study.md'
