@@ -63,6 +63,10 @@ module.exports = [
       text:'简易版axios',
       link:'/guide/simple-axios.md'
     },
+    {
+      text:'自定义指令',
+      link:'/guide/directive.md'
+    },
     
     
     // {

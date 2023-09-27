@@ -77,7 +77,7 @@ export default {
         text: '组件',
         link: '/component/icon',
         activeMatch: '/component/'
-      }
+      },
     ],
     sidebar: {
       '/guide/': [
