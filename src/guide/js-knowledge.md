@@ -1533,7 +1533,7 @@ function stringify(obj) {
 //   var str = '{"name":"zs","age":100,"arr":[1,2,4,"a",{"a":1}]}';
 ```
 
-## 59 根据id查找所在的所有父路径
+## 59、根据id查找所在的所有父路径
 ```js
  const data = [
   {
@@ -1572,4 +1572,49 @@ const searchIdWithParentPath = (list: any, id: number, target: any[] = []): any 
 }
 
 const r: any = searchIdWithParentPath(data, 111);
+```
+## 60、分时函数的封装
+```js
+/**
+ * 
+ * @param datas 数据
+ * @param consumer  执行的回调，用户自己的逻辑
+ * @param chunkSplitor 当有时间的时候执行任务
+ * @returns 
+ */
+function performChunks(datas,consumer,chunkSplitor){
+  if(typeof datas === 'number'){
+    datas = new Array(datas)
+  }
+  if(datas.length === 0) return;
+  if(chunkSplitor === undefined && globalThis.requestIdleCallback){
+    chunkSplitor = function(task)  {
+      requestIdleCallback(function(idle) {
+        task(() => idle.timeRemaining() > 0)
+      })
+    }
+  }
+  if(chunkSplitor === undefined && !globalThis.requestIdleCallback){
+    chunkSplitor = function(task)  {
+      setTimeout(function(){
+        task(function(time){
+          return time > 16
+        })
+      },30)
+    }
+  }
+  let i = 0;
+  function _run(){
+    if(i === datas.length) return ;
+    chunkSplitor((hasTime) => {
+      const now = Date.now();
+      while(hasTime(Date.now() - now)){
+        const item = datas[i]
+        consumer(item,i,datas);
+      }
+      _run();
+    })
+  }
+  _run();
+}
 ```
