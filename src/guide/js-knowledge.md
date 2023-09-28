@@ -1618,3 +1618,30 @@ function performChunks(datas,consumer,chunkSplitor){
   _run();
 }
 ```
+
+## 61、高阶函数的应用-封装动画函数
+
+```js
+const animation = (duration, from, to, onProgress) => {
+  const startTime = Date.now();
+  const speed = (to - from) / duration;
+  let value = from;
+  onProgress(value);
+  function _run() {
+    const now = Date.now();
+    const time = now - startTime
+    const d = time * speed;
+    if (time >= duration) {
+      value = to;
+      onProgress(value)
+      return;
+    }
+    value = from + d;
+    onProgress(value)
+    requestAnimationFrame(_run)
+  }
+  requestAnimationFrame(_run)
+}
+
+```
+
