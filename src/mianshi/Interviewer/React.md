@@ -1,14 +1,12 @@
-## React 面试专题
+# React 面试专题
 
-
-### React.js是 MVVM 框架吗?
+## React.js是 MVVM 框架吗?
 
 React就是Facebook的一个开源JS框架，专注的层面为View层，不包括数据访问层或者那种Hash路由（不过React 有插件支持），与Angularjs，Emberjs等大而全的框架不同，React专注的中心是Component，即组件。React认为一切页面元 素都可以抽象成组件，比如一个表单，或者表单中的某一项。
 
 React可以作为MVVM中第二个V，也就是View，但是并不是MVVM框架。MVVM一个最显著的特征：双向绑定。React没有这个，它是单向数据绑定的。React是一个单向数据流的库，状态驱动视图。react整体是函数式的思想，把组件设计成纯组件，状态和逻辑通过参数传入，所以在react中，是单向数据流，推崇结合immutable来实现数据不可变。
 
-
-### hooks用过吗？聊聊react中class组件和函数组件的区别
+## hooks用过吗？聊聊react中class组件和函数组件的区别
 
 类组件是使用ES6 的 class 来定义的组件。 函数组件是接收一个单一的 `props` 对象并返回一个React元素。
 
@@ -82,7 +80,7 @@ React Hooks的几个常用钩子:
     **useEffect和useLayoutEffect有什么区别**：简单来说就是调用时机不同，useLayoutEffect和原来componentDidMount&componentDidUpdate一致，在react完成DOM更新后马上同步调用的代码，会阻塞页面渲染。而useEffect是会在整个页面渲染完才会调用的代码。`官方建议优先使用useEffect`
 
 
-### React 组件通信方式
+## React 组件通信方式
 
 react组件间通信常见的几种情况:
 
@@ -91,7 +89,7 @@ react组件间通信常见的几种情况:
 -   3.  跨级组件通信
 -   4.  非嵌套关系的组件通信
 
-#### 1）父组件向子组件通信
+### 1）父组件向子组件通信
 
 父组件通过 props 向子组件传递需要的信息。父传子是在父组件中直接绑定一个正常的属性，这个属性就是指具体的值，在子组件中，用props就可以获取到这个值
 
@@ -107,7 +105,7 @@ const Parent = ()=>{
 }
 ```
 
-#### 2）子组件向父组件通信
+### 2）子组件向父组件通信
 
 props+回调的方式，使用公共组件进行状态提升。子传父是先在父组件上绑定属性设置为一个函数，当子组件需要给父组件传值的时候，则通过props调用该函数将参数传入到该函数当中，此时就可以在父组件中的函数中接收到该参数了，这个参数则为子组件传过来的值
 
@@ -135,7 +133,7 @@ class Parent extends Component {
 }
 ```
 
-#### 3）跨级组件通信
+### 3）跨级组件通信
 
 即父组件向子组件的子组件通信，向更深层子组件通信。
 
@@ -181,7 +179,7 @@ class Parent extends Component {
 }
 ```
 
-#### 4）非嵌套关系的组件通信
+### 4）非嵌套关系的组件通信
 
 即没有任何包含关系的组件，包括兄弟组件以及不在同一个父级中的非兄弟组件。
 
@@ -190,7 +188,7 @@ class Parent extends Component {
 -   3.  如果是兄弟组件通信，可以找到这两个兄弟节点共同的父节点, 结合父子间通信方式进行通信。
 -   4.  也可以new一个 Vue 的 EventBus,进行事件监听，一边执行监听，一边执行新增 VUE的eventBus 就是发布订阅模式，是可以在React中使用的;
 
-### setState 既存在异步情况也存在同步情况
+## setState 既存在异步情况也存在同步情况
 
 1.异步情况 在`React事件当中是异步操作`
 
@@ -265,7 +263,7 @@ class Count extends Component{
 export default Count;
 ```
 
-### 生命周期
+## 生命周期
 
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/8bae01e6eb804d849e5bb889f787707d~tplv-k3u1fbpfcp-zoom-1.image)
 
@@ -293,13 +291,13 @@ componentDidUpdate()
 componentWillUnmount()
 ```
 
-### 说一下 react-fiber
+## 说一下 react-fiber
 
-#### 1）背景
+### 1）背景
 
 react-fiber 产生的根本原因，是`大量的同步计算任务阻塞了浏览器的 UI 渲染`。默认情况下，JS 运算、页面布局和页面绘制都是运行在浏览器的主线程当中，他们之间是互斥的关系。如果 JS 运算持续占用主线程，页面就没法得到及时的更新。当我们调用`setState`更新页面的时候，React 会遍历应用的所有节点，计算出差异，然后再更新 UI。如果页面元素很多，整个过程占用的时机就可能超过 16 毫秒，就容易出现掉帧的现象。
 
-#### 2）实现原理
+### 2）实现原理
 
 -   react内部运转分三层：
 
@@ -338,11 +336,11 @@ const fiber = {
 
 传送门 ☞[# 深入了解 Fiber](https://juejin.cn/post/7002250258826657799)
 
-### Portals
+## Portals
 
 Portals 提供了一种一流的方式来将子组件渲染到存在于父组件的 DOM 层次结构之外的 DOM 节点中。结构不受外界的控制的情况下就可以使用portals进行创建
 
-### 何时要使用异步组件？如和使用异步组件
+## 何时要使用异步组件？如和使用异步组件
 
 -   加载大组件的时候
 -   路由异步加载的时候
@@ -357,7 +355,7 @@ const Box = lazy(()=>import('./components/Box'));
     {show && <Box/>}
 </Suspense>
 ```
-### React 事件绑定原理
+## React 事件绑定原理
 
 React并不是将click事件绑在该div的真实DOM上，而是`在document处监听所有支持的事件`，当事件发生并冒泡至document处时，React将事件内容封装并交由真正的处理函数运行。这样的方式不仅减少了内存消耗，还能在组件挂载销毁时统一订阅和移除事件。
 另外冒泡到 document 上的事件也不是原生浏览器事件，而是 React 自己实现的合成事件（SyntheticEvent）。因此我们如果不想要事件冒泡的话，调用 event.stopPropagation 是无效的，而应该调用 `event.preventDefault`。
@@ -365,7 +363,7 @@ React并不是将click事件绑在该div的真实DOM上，而是`在document处�
 ![react事件绑定原理](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/2089718f74b342869de15f01588f033f~tplv-k3u1fbpfcp-zoom-1.image)
 
 
-### React.lazy() 实现的原理
+## React.lazy() 实现的原理
 
 React的懒加载示例：
 ```js
@@ -526,3 +524,13 @@ class Suspense extends React.Component {
 至此，我们分析完了 React 的懒加载原理。简单来说，React利用 React.lazy与import()实现了渲染时的动态加载 ，并利用Suspense来处理异步加载资源时页面应该如何显示的问题。
 
 参考传送门☞ [React Lazy 的实现原理](https://thoamsy.github.io/blogs/react-lazy/)
+
+## setState更新是同步还是异步
+- 如果正常情况下，也就是没有使用Concurrent组件的情况下，是同步更新的，但是不会立即获取到最新的state的值，因为嗲用setState知识单纯的将你传进来的新的state放入到updateQueue这条链表上，等到点击时间结束之后，会触发内部的一个回调函数，在这个回调函数中才会真正的去更新state以及重新渲染。
+- 当使用了Concurrent组件的时候，这种情况下才是真正的异步更新模式，同样的没法立即获取最新状态，并且在React的更新和渲染的过程中使用了真正的异步方式（postMessage）这个才是真正的异步。
+- 当使用了flushSync这个API的时候，react的更新渲染，完全是同步的，会立即触发更新state以及渲染的过程，这种情况可以获取到最新的状态。
+
+----
+
+![](/assets/mianshi/Interviewer/fiber.png)
+
