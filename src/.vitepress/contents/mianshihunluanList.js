@@ -5,4 +5,5 @@ module.exports = [
     {text:'浏览器调用本地软件',link: '/mianshi/hunluan/window-native.md' },
     {text:'XSS、CSRF攻击以及预防手段',link: '/mianshi/hunluan/xss-crsf.md' },
     {text:'面试题总结',link: '/mianshi/hunluan/mianshi1.md' }
+    {text:'浏览器工作原理与实践',link:'/mianshi/hunluan/browser-principle.md'}
 ];
