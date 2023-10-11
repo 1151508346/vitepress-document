@@ -1,3 +1,4 @@
+# 浏览器工作原理与实践 
 ## 浏览器工作原理与实践 
 https://www.cnblogs.com/bala/p/11835441.html
 ## 宏观视角下的浏览器：01 Chrome 架构： 仅仅打开了 1 个页面？为什么有 4 个进程？ 
@@ -86,3 +87,5 @@ https://www.cnblogs.com/bala/p/16195805.html
 https://www.cnblogs.com/bala/p/16258523.html
 ## 课外加餐：6 | HTTPS：浏览器如何验证数字证书？
 https://www.cnblogs.com/bala/p/16262124.html
+
+[原始链接：https://www.cnblogs.com/bala/tag/浏览器工作原理与实践](https://www.cnblogs.com/bala/tag/浏览器工作原理与实践)
