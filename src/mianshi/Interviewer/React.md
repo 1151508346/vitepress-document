@@ -1,4 +1,4 @@
-# React 面试专题
+# DISABLED_NEW_JSX_TRANSFORM=trueReact 面试专题
 
 ## React.js是 MVVM 框架吗?
 
@@ -533,4 +533,74 @@ class Suspense extends React.Component {
 ----
 
 ![](/assets/mianshi/Interviewer/fiber.png)
+
+## 禁用新版的**jsx**转换器
+
+> 在操作命令中配置 DISABLED_NEW_JSX_TRANSFORM=true
+
+```json
+{
+  "scripts": {
+    "start": "cross-env DISABLE_NEW_JSX_TRANSFORM=true react-scripts start",
+    "build": "cross-env DISABLE_NEW_JSX_TRANSFORM=true react-scripts build",
+    "test": "cross-env DISABLE_NEW_JSX_TRANSFORM=true react-scripts test",
+    "eject": "cross-env DISABLE_NEW_JSX_TRANSFORM=true react-scripts eject"
+  },
+}
+```
+
+首先，在浏览器中无法直接使用jsx，需要借助babel将jsx代码转化为javaScript。
+
+#### 新的转换有何不同？
+
+当你使用 JSX 时，编译器会将其转换为浏览器可以理解的 React 函数调用。旧的 JSX 转换会把 JSX 转换为 React.createElement(...) 调用。
+
+例如，假设源代码如下：
+
+```js
+import React from 'react';
+function App() {
+  return <h1>Hello World</h1>;
+}
+```
+
+
+
+旧的 JSX 转换会将上述代码变成普通的 JavaScript 代码：
+
+```jsx
+import React from 'react';
+
+function App() {
+  return React.createElement('h1', null, 'Hello world');
+}
+```
+
+```jsx
+}
+```
+
+此处就涉及到之前被面试问到的一个问题：**为什么在每个jsx文件中我们都需要引入React，哪怕我们在代码中没有用到React？**
+ 就是因为我们在使用jsx时，需要转换，但是这个转换是调用了React.createElement这个方法。
+
+为了解决使用jsx必须要在react的环境中使用，新的 JSX 转换不会将 JSX 转换为 React.createElement，而是自动从 React 的 package 中引入jsx函数并调用。
+
+假设你的源代码如下：
+
+```jsx
+function App() {
+  return <h1>Hello World</h1>;
+}
+```
+
+下方是新 JSX 被转换编译后的结果：
+
+```jsx
+// 由编译器引入（禁止自己引入！）
+import {jsx as _jsx} from 'react/jsx-runtime';
+
+function App() {
+  return _jsx('h1', { children: 'Hello world' });
+}
+```
 
