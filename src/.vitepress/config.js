@@ -65,6 +65,10 @@ export default {
         link: '/projects/vite_vue2.md'
       },
       {
+        text:'node',
+        link: '/node/vm模块.md'
+      },
+      {
         text: '面试题',
         items: [
           { text: '混乱的', link: '/mianshi/hunluan/quiteStart' },
@@ -85,6 +89,18 @@ export default {
           text: '指南',
           collapsible: true,
           items: guideList,
+        }
+      ],
+      '/node/':[
+        {
+          text: 'node',
+          collapsible: true,
+          items: [
+            {
+                text: 'NodeJs中vm模块详解',
+                link: '/node/vm模块.md'
+            }
+          ]
         }
       ],
 
