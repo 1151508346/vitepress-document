@@ -67,6 +67,10 @@ module.exports = [
       text:'自定义指令',
       link:'/guide/directive.md'
     },
+    {
+      text:'github双重身份验证解决方案',
+      link:'/guide/github双重身份验证解决方案.md'
+    }
     
     
     // {
