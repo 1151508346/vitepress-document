@@ -99,7 +99,11 @@ export default {
             {
                 text: 'NodeJs中vm模块详解',
                 link: '/node/vm模块.md'
-            }
+            },
+            {
+              text: 'commonjs',
+              link: '/node/common.md'
+          }
           ]
         }
       ],
