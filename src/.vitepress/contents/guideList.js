@@ -70,8 +70,11 @@ module.exports = [
     {
       text:'github双重身份验证解决方案',
       link:'/guide/github双重身份验证解决方案.md'
+    },
+    {
+      text:'react中实现插槽',
+      link:'/guide/react中实现插槽.md'
     }
-    
     
     // {
     //   text: '学习资料',
