@@ -1,11 +1,10 @@
 
 const path = require('path')
 
-
 const guideList = require('./contents/guideList')
 const mianshihunluanList = require('./contents/mianshihunluanList');
 const interviewerList = require('./contents/interviewerList')
-
+const vueList = require('./contents/vueList');
 
 const logoPath = (logo) => {
   const { NODE_ENV } = process.env;
@@ -65,8 +64,12 @@ export default {
         link: '/projects/vite_vue2.md'
       },
       {
-        text:'node',
+        text:'Node',
         link: '/node/vm模块.md'
+      },
+      {
+        text:'Vue',
+        link:'/vue/vue.3.3新特性.md'
       },
       {
         text: '面试题',
@@ -89,6 +92,13 @@ export default {
           text: '指南',
           collapsible: true,
           items: guideList,
+        }
+      ],
+      '/vue':[
+        {
+          text: 'Vue',
+          collapsible: true,
+          items: vueList,
         }
       ],
       '/node/':[
