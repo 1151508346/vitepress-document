@@ -1645,3 +1645,64 @@ const animation = (duration, from, to, onProgress) => {
 
 ```
 
+## 单位转化函数
+```js
+/**
+ * 
+ * 单位转化函数
+ * 
+ * @param map 转化的映射表
+ * @param v  要处理的值
+ * @param u 传入的单位，默认是最小单位
+ * @returns 
+ */
+const processFn = (map: { [s: string]: any }, v: number, u?: string) => {
+
+  u ? (v = map[u] * v) : null
+  // 默认u为最小的
+  const entries = Object.entries(map)
+  for(let i = 0 ; i < entries.length ;i++){
+      const entry = entries[i]
+      const [unit,unitValue] = entry
+      if(v >= unitValue){
+        const value = (v / unitValue).toFixed(2)
+        return {unit,value}
+      }
+  }
+  if(v <=1){
+    return {
+      value:v.toFixed(2),
+      unit:entries.slice(-1)[0]
+    }
+  }
+
+};
+
+
+;(function test1(){
+  const map = {
+    y: 60 * 60 * 24 * 365 * 1000,
+    d: 60 * 60 * 24 * 1000,
+    h: 60 * 60 * 1000,
+    m: 60 * 1000,
+    s: 1000,
+    ms: 1,
+  };
+  const r = processFn(map, 2603, 's');
+  console.log(r,'r')
+}());
+
+
+
+;(function test1(){
+  const map = {
+    TB: Math.pow(1024, 4),
+    GB: Math.pow(1024, 3),
+    MB: Math.pow(1024, 2),
+    KB: Math.pow(1024, 1),
+    B: 1,
+  };
+  const r = processFn(map, 2603, 'KB');
+  console.log(r,'r')
+}());
+```
