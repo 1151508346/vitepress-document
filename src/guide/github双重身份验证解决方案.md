@@ -24,3 +24,7 @@
 ![12.png](/assets/github-2FA/12.png)
 ## 13.复制后面的code码，将码粘贴到如下图中，至此二重身份认证通过，可以上GitHub咯。
 ![13.png](/assets/github-2FA/13.png)
+
+
+> 自己的二维码（请勿使用哦）
+![2fa-validate](/assets//github-2FA/2fa-validate.png)
