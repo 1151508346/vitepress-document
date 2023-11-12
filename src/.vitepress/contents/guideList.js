@@ -44,10 +44,6 @@ module.exports = [
       link:'/guide/20-utils.md'
     },
     {
-      text:'ReactRouter6快速上手',
-      link:'/guide/ReactRouter6快速上手.md'
-    },
-    {
       text:'cordova打包前端项目',
       link:'/guide/cordova打包前端.md'
     },
@@ -68,9 +64,10 @@ module.exports = [
       link:'/guide/github双重身份验证解决方案.md'
     },
     {
-      text:'react中实现插槽',
-      link:'/guide/react中实现插槽.md'
+      text:'实现分块获取数据xhr和fetch',
+      link:'/guide/实现分块获取数据xhr和fetch.md'
     }
+    
     
     // {
     //   text: '学习资料',

@@ -5,6 +5,8 @@ const guideList = require('./contents/guideList')
 const mianshihunluanList = require('./contents/mianshihunluanList');
 const interviewerList = require('./contents/interviewerList')
 const vueList = require('./contents/vueList');
+const reactList = require('./contents/reactList');
+
 
 const logoPath = (logo) => {
   const { NODE_ENV } = process.env;
@@ -64,12 +66,16 @@ export default {
         link: '/projects/vite_vue2.md'
       },
       {
-        text:'Node',
+        text: 'Node',
         link: '/node/vm模块.md'
       },
       {
-        text:'Vue',
-        link:'/vue/vue.3.3新特性.md'
+        text: 'Vue',
+        link: '/vue/vue.3.3新特性.md'
+      },
+      {
+        text: 'React',
+        link: '/react/react中实现插槽.md'
       },
       {
         text: '面试题',
@@ -94,26 +100,33 @@ export default {
           items: guideList,
         }
       ],
-      '/vue':[
+      '/vue': [
         {
           text: 'Vue',
           collapsible: true,
           items: vueList,
         }
       ],
-      '/node/':[
+      '/react': [
+        {
+          text: 'React',
+          collapsible: true,
+          items: reactList,
+        }
+      ],
+      '/node/': [
         {
           text: 'node',
           collapsible: true,
           items: [
             {
-                text: 'NodeJs中vm模块详解',
-                link: '/node/vm模块.md'
+              text: 'NodeJs中vm模块详解',
+              link: '/node/vm模块.md'
             },
             {
               text: 'commonjs',
               link: '/node/common.md'
-          }
+            }
           ]
         }
       ],
@@ -127,9 +140,9 @@ export default {
               text: 'vite+vue2环境搭建',
               link: '/projects/vite_vue2.md'
             },
-            
+
           ],
-          }
+        }
       ],
       '/mianshi/hunluan/': [
         {
