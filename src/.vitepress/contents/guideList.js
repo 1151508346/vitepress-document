@@ -66,6 +66,10 @@ module.exports = [
     {
       text:'实现分块获取数据xhr和fetch',
       link:'/guide/实现分块获取数据xhr和fetch.md'
+    },
+    {
+      text:'flutter搭建',
+      link:'/guide/flutter搭建.md'
     }
     
     
