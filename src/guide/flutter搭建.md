@@ -107,6 +107,11 @@
       > android/build.gradle
       - 2. 修改下载对应包的镜像为阿里镜像，（因为原地址下载很慢，容易失败）
       - ![Alt text](/assets/flutter/gradle-config.png)
+      ```
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        maven { url 'https://maven.aliyun.com/nexis/content/groups/public' }
+      ```
       - 3. 找到gradle-wrapper.properties文件
       >  android/gradle-wrapper.properties
       将distributionUrl配置的网络地址改为本地的，让其从本地加载，解决下载过慢的问题,容易失败
@@ -116,8 +121,11 @@
     zipStoreBase=GRADLE_USER_HOME
     zipStorePath=wrapper/dists
     distributionUrl=file:///D:/gradle-7.5-all.zip
-    #distributionUrl=https\://services.gradle.org/distributions/gradle-7.5-all.zip
+    #distributionUrl=https\://services.gradle.org/distributions/gradle-7.5-all.zip 
     ```
+      - 4 使用命令或者vscode调试模式进行运行
+        - 第一种方式，命令行输入： flutter run android
+        - 第二种方式，调试模式，点击launsh.json 选择web或者安卓机
 
 
 
