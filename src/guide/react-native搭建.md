@@ -183,6 +183,7 @@
   ```
   react-native run-android
   ```
+  ![Alt text](/assets/react-native/run-result.png)
 
   **备注** 如果出现sdk找不到的问题，可以在项目中的android目录下创建local.properties文件进行如下配置:
   ```
