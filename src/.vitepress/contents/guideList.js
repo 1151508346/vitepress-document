@@ -70,6 +70,10 @@ module.exports = [
     {
       text:'flutter搭建',
       link:'/guide/flutter搭建.md'
+    },
+    {
+      text:'react-native搭建',
+      link:'/guide/react-native搭建.md'
     }
     
     
