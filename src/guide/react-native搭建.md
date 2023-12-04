@@ -38,6 +38,8 @@
   %JAVA_HOME%\bin
   ```
   1. 配置android的SDK
+     打开sdk manager，配置sdk路径
+  ![Alt text](/assets/react-native/config-sdk-contents.png)
 
   - 在电脑的环境环境变量中创建ANDROID_HOME
   ```
@@ -54,7 +56,7 @@
   %ANDROID_HOME%\tools\bin
   %ANDROID_HOME%\cmdline-tools\bin
   ```
-  4. 配置gradle
+  1. 配置gradle
   - 在电脑的环境环境变量中创建ANDROID_HOME
   ```
   变量名:GRADLE_USER_HOME
