@@ -194,6 +194,68 @@
   ![Alt text](/assets/react-native/local.properties.png)
   > 将本地的sdk配置到项目中（如何启动没有问题，这步可以省略）
 
+## 5. 打包
+### 生成一个签名密钥
+  
+  在cmd或者终端下输入以下命令：
+  ```bash
+  $ keytool -genkeypair -v -storetype PKCS12 -keystore my-release-key.keystore -alias my-key-alias -keyalg RSA -keysize 2048 -validity 10000
+  ````
+  这条命令会要求你输入密钥库（keystore）和对应密钥的密码，然后设置一些发行相关的信息。最后它会生成一个叫做my-release-key.keystore的密钥库文件。
+  密钥库里应该已经生成了一个单独的密钥，有效期为 10000 天。--alias 参数后面的别名是你将来为应用签名时所需要用到的，所以记得记录这个别名
+  **注意：请记得妥善地保管好你的密钥库文件，一般不要上传到版本库或者其它的地方。**
+
+### 设置 gradle 变量
+
+    1. 把my-release-key.keystore文件放到你工程中的android/app文件夹下。
+    2. 编辑~/.gradle/gradle.properties（全局配置，对所有项目有效）或是项目目录/android/gradle.properties（项目配置，只对所在项目有效）。如果没有gradle.properties文件你就自己创建一个，添加如下的代码（注意把其中的****替换为相应密码）
+
+  **注意：~符号表示用户目录，比如 windows 上可能是C:\Users\用户名，而 mac 上可能是/Users/用户名。**
+
+  ```
+  MYAPP_RELEASE_STORE_FILE=my-release-key.keystore
+  MYAPP_RELEASE_KEY_ALIAS=my-key-alias
+  MYAPP_RELEASE_STORE_PASSWORD=*****
+  MYAPP_RELEASE_KEY_PASSWORD=*****
+  ```
+
+  上面的这些会作为 gradle 的变量，在后面的步骤中可以用来给应用签名。
+
+### 把签名配置加入到项目的 gradle 配置中
+
+  编辑你项目目录下的android/app/build.gradle，添加如下的签名配置：
+
+  ```
+    ...
+    android {
+      ...
+        defaultConfig { ... }
+        signingConfigs {
+            release {
+                if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
+                    storeFile file(MYAPP_RELEASE_STORE_FILE)
+                    storePassword MYAPP_RELEASE_STORE_PASSWORD
+                    keyAlias MYAPP_RELEASE_KEY_ALIAS
+                    keyPassword MYAPP_RELEASE_KEY_PASSWORD
+                }
+            }
+        }
+        buildTypes {
+            release {
+                ...
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+    ...
+  ```
+### 生成发行 APK 包
+  只需在终端中运行以下命令：
+
+    ```
+    cd android
+    ./gradlew assembleRelease
+    ```
 
 
   
