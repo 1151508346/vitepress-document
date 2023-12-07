@@ -78,6 +78,10 @@ export default {
         link: '/react/react中实现插槽.md'
       },
       {
+          text:'flutter',
+          link:'/flutter/flutter搭建.md'
+      },
+      {
         text: '面试题',
         items: [
           { text: '混乱的', link: '/mianshi/hunluan/quiteStart' },
@@ -126,6 +130,22 @@ export default {
             {
               text: 'commonjs',
               link: '/node/common.md'
+            }
+          ]
+        }
+      ],
+      '/flutter':[
+        {
+          text: 'flutter',
+          collapsible: true,
+          items: [
+            {
+              text:'flutter搭建',
+              link:'/flutter/flutter搭建.md'
+            },
+            {
+              text: 'flutter与h5页面的双向通信',
+              link: '/flutter/flutter与h5页面的双向通信.md'
             }
           ]
         }

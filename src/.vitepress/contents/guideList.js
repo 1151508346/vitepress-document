@@ -68,10 +68,6 @@ module.exports = [
       link:'/guide/实现分块获取数据xhr和fetch.md'
     },
     {
-      text:'flutter搭建',
-      link:'/guide/flutter搭建.md'
-    },
-    {
       text:'react-native搭建',
       link:'/guide/react-native搭建.md'
     }
