@@ -146,6 +146,11 @@ export default {
             {
               text: 'flutter与h5页面的双向通信',
               link: '/flutter/flutter与h5页面的双向通信.md'
+            },
+            {
+              text: 'flutter学习',
+              link: '/flutter/flutter-style.md'
+              
             }
           ]
         }
