@@ -149,7 +149,7 @@ export default {
             },
             {
               text: 'flutter学习',
-              link: '/flutter/flutter-style.md'
+              link: '/flutter/flutter-study.md'
               
             }
           ]
