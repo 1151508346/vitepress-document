@@ -308,5 +308,165 @@ class Second extends StatelessWidget {
 
 ```
 
+## 获取通讯录
+### 导包
+```yaml
+  permission_handler: ^11.0.1 # 获取用户权限的包
+  contacts_service: ^0.6.3  #获取联系人
+```
+### 开启访问权限，在AndroidManifest.xml文件中添加
+```xml
+  <!--联系人-->
+  <uses-permission android:name="android.permission.READ_CONTACTS" />
+  <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+```
+### 核心代码
+- 请求权限
+```dart
+ PermissionStatus status = await Permission.contacts.request();
+```
+> Permission.contacts.request(),返回值是Future&lt;PermissionStatus&gt;
+- 获取通讯录列表
+```dart
+ List<Contact> contacts = await ContactsService.getContacts();
+```
+> ContactsService.getContacts(),返回值是Future&lt;Contact&gt;,包含了设备上的通讯录信息
+### 使用
+
+```dart
+// ignore_for_file: unused_local_variable
+
+// import 'dart:convert';
+
+import 'package:flutter/material.dart';
+// import 'package:webview_flutter/webview_flutter.dart';
+// import 'package:flutter_pdfview/flutter_pdfview.dart';
+// import 'dart:io';
+// import 'package:path_provider/path_provider.dart';
+import 'package:permission_handler/permission_handler.dart';
+// import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+import 'package:contacts_service/contacts_service.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: true,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+  final String title;
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  void initState() {
+    super.initState();
+    getContact();
+  }
+
+  List<ListItem> items = [];
+  // 获取目录
+  void getContact() async {
+    // 请求获取通讯录的权限
+    PermissionStatus status = await Permission.contacts.request();
+    if (status.isGranted) {
+      print('重新获取');
+      List<Map> contactList = await fetchContacts();
+      setState(() {
+        List<ListItem> temp = [];
+        print(contactList);
+        contactList.forEach((element) {
+          temp.add(MessageItem('${element['name']}', '${element['phone']}'));
+        });
+        items = temp;
+      });
+      // 获取通讯录数据的代码
+    } else {
+      print('拒绝权限');
+      // 用户拒绝了权限请求，你可以提醒用户打开应用的权限设置
+    }
+  }
+
+  Future<List<Map>> fetchContacts() async {
+    // 获取通讯录列表
+    List<Contact> contacts = await ContactsService.getContacts();
+    List<Map> list = [];
+    for (var contact in contacts) {
+      // Map m = (contact as Contact).toMap(); 将Contact类型转成map类型，这块可以不用强转，是因为没有提示
+      Map map = {};
+      print('Name: ${contact.displayName}');
+      var phones = contact.phones ?? [];
+      String? num = phones.length > 0 ? phones[0].value : '';
+      var emails = contact.emails ?? [];
+      map['name'] = contact.displayName;
+      map['phone'] = num;
+      map['email'] = emails.length > 0 ? emails[0].value : '';
+      list.add(map);
+    }
+    return list;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        // toolbarHeight: 0,
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      ),
+      body: GestureDetector(
+        onTap: () {},
+        child: ListView.builder(
+          itemCount: items.length,
+          itemBuilder: (context, index) {
+            final item = items[index];
+            return ListTile(
+              title: item.buildTitle(context),
+              subtitle: item.buildSubtitle(context),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+abstract class ListItem {
+  /// The title line to show in a list item.
+  Widget buildTitle(BuildContext context);
+
+  /// The subtitle line, if any, to show in a list item.
+  Widget buildSubtitle(BuildContext context);
+}
+
+class MessageItem implements ListItem {
+  final String sender;
+  final String body;
+
+  MessageItem(this.sender, this.body);
+
+  @override
+  Widget buildTitle(BuildContext context) => Text(sender);
+
+  @override
+  Widget buildSubtitle(BuildContext context) => Text(body);
+}
+
+```
 
 
