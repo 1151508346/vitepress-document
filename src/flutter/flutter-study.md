@@ -468,5 +468,29 @@ class MessageItem implements ListItem {
 }
 
 ```
+## 检查当前设备是否开启VPN
 
+
+```dart
+import 'dart:io';
+class CheckVpnConnectionStatus {
+  /// 如果设备具有 VPN 连接，返回 true
+  static Future<bool> isVpnActive() async {
+    bool isVpnActive;
+    List<NetworkInterface> interfaces = await NetworkInterface.list(
+        includeLoopback: false, type: InternetAddressType.any);
+    interfaces.isNotEmpty
+        ? isVpnActive = (interfaces.any((interface) {
+          return result(interface);
+        }))
+        : isVpnActive = false;
+    return isVpnActive;
+  }
+  static bool result(interface) {
+    return interface.name.contains("tun") ||
+        interface.name.contains("ppp") ||
+        interface.name.contains("pptp");
+  }
+}
+```
 
