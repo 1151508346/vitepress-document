@@ -506,3 +506,7 @@ SystemChrome.setPreferredOrientations(
 ```
 > 原文链接：https://blog.csdn.net/liuxingyuzaixian/article/details/133643904
 
+## ListView和SingleChilScrollView的区别
+> 原文链接：https://blog.csdn.net/yikezhuixun/article/details/134944340
+
+
