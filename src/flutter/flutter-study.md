@@ -493,4 +493,16 @@ class CheckVpnConnectionStatus {
   }
 }
 ```
+## 实现横竖屏
+```dart
+// 强制横屏
+SystemChrome.setPreferredOrientations([
+  DeviceOrientation.landscapeLeft,
+  DeviceOrientation.landscapeRight
+]);
+// 强制竖屏
+SystemChrome.setPreferredOrientations(
+    [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+```
+> 原文链接：https://blog.csdn.net/liuxingyuzaixian/article/details/133643904
 
