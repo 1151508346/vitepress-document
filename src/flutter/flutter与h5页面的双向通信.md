@@ -215,3 +215,285 @@ android:usesCleartextTraffic="true"
 <uses-permission android:name="android.permission.INTERNET"/>
 ```
 
+
+
+## 采用webview_flutter4.0.0及以上的方式
+- 导包
+再pubspec.yaml中引入webview_flutter
+```yaml
+dependencies:
+  webview_flutter: ^4.0.0
+```
+
+## 小案例完整代码
+```dart
+import 'dart:async';
+import 'dart:convert';
+
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: true,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: VideoPlayer(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+  final String title;
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+  String jsStr = 'default';
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+  void changeJsStr(String newJsStr) {
+    setState(() {
+      jsStr = newJsStr;
+    });
+  }
+  bool status = false;
+  void tapFn() {
+    if (status == true) {
+      // 强制竖屏
+      SystemChrome.setPreferredOrientations(
+          [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+    } else {
+      // 强制横屏
+      SystemChrome.setPreferredOrientations(
+          [DeviceOrientation.landscapeLeft, DeviceOrientation.landscapeRight]);
+    }
+    status = !status;
+  }
+
+  WebViewController? webViewController;
+  // http://192.168.109.227:5500/h5/index.html
+  final url = 'https://duoju.vip/vodplay/99783-2-1.html';
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 0,
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      ),
+      body: Container(
+        alignment: Alignment.topLeft,
+        child: Column(children: [
+          Container(
+            color: Colors.red,
+            child: Row(
+              children: [
+                Expanded(
+                    child: GestureDetector(
+                  onTap: tapFn,
+                  child: Container(
+                    color: Colors.blueAccent,
+                    child: Text(jsStr),
+                  ),
+                )),
+                Expanded(
+                    child: Container(
+                  color: Colors.cyanAccent,
+                  child: const Text('b'),
+                )),
+                Expanded(
+                    child: Container(
+                  color: Colors.amberAccent,
+                  child: const Text('c'),
+                )),
+              ],
+            ),
+          ),
+          Expanded(
+              child: Container(
+                  color: Colors.red,
+                  alignment: Alignment.topLeft,
+                  width: double.infinity,
+                  child: VideoPlayer()
+                  
+          ))
+        ]),
+      ),
+    );
+  }
+}
+
+class VideoPlayer extends StatefulWidget {
+  @override
+  _VideoPlayerState createState() => _VideoPlayerState();
+}
+
+class _VideoPlayerState extends State<VideoPlayer> {
+  late WebViewController controller;
+  @override
+  void initState() {
+    super.initState();
+    controller = createController();
+  }
+
+  // final url = 'https://www.douyin.com/';
+  // final url = 'https://duoju.vip/';
+  final url = 'http://192.168.109.227:5050/';
+
+  WebViewController createController() {
+    WebViewController _controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..setBackgroundColor(const Color(0x00000000))
+      ..setNavigationDelegate(
+        NavigationDelegate(
+          onProgress: (int progress) {
+            debugPrint('WebView is loading (progress : $progress%)');
+          },
+          onPageStarted: (String url) {
+            print(url);
+          },
+          onPageFinished: (String url) {
+            print(url);
+          },
+          onWebResourceError: (WebResourceError error) {
+            print('error:${error}');
+          },
+          onNavigationRequest: (NavigationRequest request) {
+            // if (request.url.startsWith('https://www.youtube.com/')) {
+            //   return NavigationDecision.prevent;
+            // }
+            return NavigationDecision.navigate;
+          },
+        ),
+      )// Flutter会注册到window上通过window.Flutter.postMessage方法来在h5中给flutter传递参数
+      ..addJavaScriptChannel("Flutter", onMessageReceived: (message) {
+        print(message.message);
+      })
+      ..loadRequest(Uri.parse(url));
+
+    return _controller;
+  }
+
+  bool status = false;
+  void xuanzhuanTop() {
+    if (status == true) {
+      // 强制竖屏
+      SystemChrome.setPreferredOrientations(
+          [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+    } else {
+      // 强制横屏
+      SystemChrome.setPreferredOrientations(
+          [DeviceOrientation.landscapeLeft, DeviceOrientation.landscapeRight]);
+    }
+
+    status = !status;
+  }
+
+  // https://dagongren1.com/play/118034-1-1.html
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+          title: Text(
+            '视频',
+            style: TextStyle(fontSize: 10),
+          ),
+          toolbarHeight: 20,
+          actions: [
+            GestureDetector(
+              onTap: xuanzhuanTop,
+              child: Container(
+                  width: 20,
+                  // padding: EdgeInsets.only(right: 50),
+                  margin: EdgeInsets.only(right: 30),
+                  child: Icon(
+                    Icons.loop_sharp,
+                  )),
+            )
+          ]),
+      body: Container(
+          child: Column(
+        children: [
+          ElevatedButton(
+              onPressed: () {
+                // 在flutter里面调用h5方法给h5传递参数
+                controller
+                    .runJavaScript('window.flutterJSBridge.sendData(123);');
+              },
+              child: Text('send')),
+          Expanded(
+              child: Container(
+                child: WebViewWidget(controller: controller),
+              )
+          ),
+        ],
+      )),
+      
+    );
+  }
+}
+
+```
+
+## 核心代码
+- 创建webView控制器
+```dart
+WebViewController _controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted)
+      ..setBackgroundColor(const Color(0x00000000))
+      ..setNavigationDelegate(
+        NavigationDelegate(
+          onProgress: (int progress) {
+            debugPrint('WebView is loading (progress : $progress%)');
+          },
+          onPageStarted: (String url) {
+            print(url);
+          },
+          onPageFinished: (String url) {
+            print(url);
+          },
+          onWebResourceError: (WebResourceError error) {
+            print('error:${error}');
+          },
+          onNavigationRequest: (NavigationRequest request) {
+            // if (request.url.startsWith('https://www.youtube.com/')) {
+            //   return NavigationDecision.prevent;
+            // }
+            return NavigationDecision.navigate;
+          },
+        ),
+      )// Flutter会注册到window上通过window.Flutter.postMessage方法来在h5中给flutter传递参数
+      ..addJavaScriptChannel("Flutter", onMessageReceived: (message) {
+        print(message.message);
+      })
+      ..loadRequest(Uri.parse(url));
+```
+- h5给flutter发送数据
+>  "Flutter"这个自定义的名称会注册到window上的属性，通过window.Flutter.postMessage方法来在h5中给flutter传递参数
+```dart
+_controller.addJavaScriptChannel("Flutter", onMessageReceived: (message) {
+  print(message.message);
+})
+```
+- flutter发送数据
+```dart
+  // 在flutter中调用h5的方法，给h5传递参数
+ _controller.runJavaScript('window.flutterJSBridge.sendData(123);');
+```
