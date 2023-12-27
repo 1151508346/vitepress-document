@@ -452,6 +452,21 @@ class _VideoPlayerState extends State<VideoPlayer> {
 
 ```
 
+## h5中的代码
+```js
+
+window.flutterJSBridge = {
+  sendData: (data) => {
+    console.log(data)
+  }
+}
+
+const handleClick = () => {
+  console.log(window)
+  window.Flutter.postMessage('aaaaaaaaaaaaaaaa')
+}
+```
+
 ## 核心代码
 - 创建webView控制器
 ```dart
