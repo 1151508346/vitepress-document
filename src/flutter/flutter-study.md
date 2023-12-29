@@ -510,3 +510,280 @@ SystemChrome.setPreferredOrientations(
 > 原文链接：https://blog.csdn.net/yikezhuixun/article/details/134944340
 
 
+## 实现保存状态
+- 创建TabController控制器
+```dart
+// length： 切换tab的长度
+// vsync:  核心提供者 TickerProvider
+TabController _tabController = TabController(length: 3, vsync: this);
+```
+- 创建切换的TabBar
+```dart
+TabBar(
+  controller: _tabController,  // TabController控制器
+  // 切换的页面
+  tabs: [Tab(text: 'page1'), Tab(text: 'page2'), Tab(text: 'page3')],
+),
+```
+- 切换显示页面的部件
+```dart
+List<Widget> childList = [
+  MyPage1(),
+  MyPage2(),
+  MyPage3(),
+];
+TabBarView(controller: _tabController, children: childList)
+```
+- 使所有要显示的部件混合 AutomaticKeepAliveClientMixin抽象类，同时实现wantKeepAlive属性，如何为true表示保存状态，反之不保存状态。
+```dart
+class _MyPage1State extends State<MyPage1> with AutomaticKeepAliveClientMixin {
+  @override
+  bool get wantKeepAlive => true;
+}
+```
+
+### 案例代码
+```dart
+import 'dart:async';
+import 'dart:convert';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:webview_flutter/webview_flutter.dart';
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: true,
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      home: MyHomePage(title: 'aaaaaaa'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key, required this.title});
+  final String title;
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage>
+    with SingleTickerProviderStateMixin {
+  TabController? _tabController;
+  List<Widget> childList = [];
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 3, vsync: this);
+    childList.addAll([
+      MyPage1(tabController: _tabController as TabController),
+      MyPage2(tabController: _tabController as TabController),
+      MyPage3(tabController: _tabController as TabController),
+    ]);
+  }
+  @override
+  void dispose() {
+    _tabController?.dispose();
+    super.dispose();
+  }
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 0,
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        bottom: TabBar(
+          controller: _tabController,
+          tabs: [Tab(text: 'page1'), Tab(text: 'page2'), Tab(text: 'page3')],
+        ),
+      ),
+      body: TabBarView(controller: _tabController, children: childList),
+    );
+  }
+}
+
+class MyPage1 extends StatefulWidget {
+  final TabController tabController;
+  const MyPage1({super.key, required this.tabController});
+
+  @override
+  _MyPage1State createState() => _MyPage1State();
+}
+
+class _MyPage1State extends State<MyPage1> with AutomaticKeepAliveClientMixin {
+  @override
+  bool get wantKeepAlive => true;
+  int count = 0;
+  int indexTab = 0;
+  void click() {
+    setState(() {
+      count += 1;
+    });
+  }
+
+  bool active = false; // 失活
+  @override
+  void initState() {
+    super.initState();
+    active = true; // 激活
+    widget.tabController.addListener(() {
+      if (widget.tabController.index == indexTab) {
+        if (active == false) {
+          active = true;
+          actived();
+        }
+      } else {
+        if (active == true) {
+          active = false;
+          disActived();
+        }
+      }
+    });
+  }
+
+  void actived() {
+    print('page1 激活');
+  }
+
+  void disActived() {
+    print('page1 失活');
+  }
+  @override
+  Widget build(BuildContext context) {
+    super.build(context); // 重要：确保调用 super.build
+    return Container(
+      // 页面内容
+      child: Column(children: [
+        ElevatedButton(onPressed: click, child: Text("page1:${count}")),
+      ]),
+    );
+  }
+}
+
+class MyPage2 extends StatefulWidget {
+  final TabController tabController;
+  const MyPage2({super.key, required this.tabController});
+  @override
+  _MyPage2State createState() => _MyPage2State();
+}
+
+class _MyPage2State extends State<MyPage2> with AutomaticKeepAliveClientMixin {
+  @override
+  bool get wantKeepAlive => true;
+  int count = 0;
+  int indexTab = 1;
+  void click() {
+    setState(() {
+      count += 1;
+    });
+  }
+
+  bool active = false; // 失活
+  @override
+  void initState() {
+    active = true; // 激活
+    super.initState();
+    widget.tabController.addListener(() {
+      if (widget.tabController.index == indexTab) {
+        if (active == false) {
+          active = true;
+          actived();
+        }
+      } else {
+        if (active == true) {
+          active = false;
+          disActived();
+        }
+      }
+    });
+  }
+
+  void actived() {
+    print('page2 激活');
+  }
+
+  void disActived() {
+    print('page2 失活');
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    super.build(context); // 重要：确保调用 super.build
+
+    return Container(
+      // 页面内容
+      child: Column(children: [
+        ElevatedButton(onPressed: click, child: Text("page1:${count}"))
+      ]),
+    );
+  }
+}
+
+class MyPage3 extends StatefulWidget {
+  final TabController tabController;
+  const MyPage3({super.key, required this.tabController});
+  @override
+  _MyPage3State createState() => _MyPage3State();
+}
+
+class _MyPage3State extends State<MyPage3> with AutomaticKeepAliveClientMixin {
+  @override
+  bool get wantKeepAlive => true;
+  int count = 0;
+  int indexTab = 2;
+  void click() {
+    setState(() {
+      count += 1;
+    });
+  }
+  bool active = false; // 失活
+  @override
+  void initState() {
+    active = true; // 激活
+    super.initState();
+    widget.tabController.addListener(() {
+      if (widget.tabController.index == indexTab) {
+        if (active == false) {
+          active = true;
+          actived();
+        }
+      } else {
+        if (active == true) {
+          active = false;
+          disActived();
+        }
+      }
+    });
+  }
+  void actived() {
+    print('page3 激活');
+  }
+  void disActived() {
+    print('page3 失活');
+  }
+  @override
+  Widget build(BuildContext context) {
+    super.build(context); // 重要：确保调用 super.build
+
+    return Container(
+      // 页面内容
+      child: Column(children: [
+        ElevatedButton(onPressed: click, child: Text("page3:${count}"))
+      ]),
+    );
+  }
+}
+```
+
+## 实现保存状态（二）
+[实现保存状态（二）](/flutter/flutter-study/keep-status)
+
+
