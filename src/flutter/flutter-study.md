@@ -786,4 +786,94 @@ class _MyPage3State extends State<MyPage3> with AutomaticKeepAliveClientMixin {
 ## 实现保存状态（二）
 [实现保存状态（二）](/flutter/flutter-study/keep-status)
 
+## 获取手机电量同时监控电量的状态
+
+1. 导入依赖
+pubspec.yaml
+```yaml
+battery_plus: ^2.0.0
+# battery: ^2.0.0
+```
+> 导入battery_plus和battery任意一个都可以
+
+### 完成小案例
+```dart
+import 'package:flutter/material.dart';
+import 'package:battery_plus/battery_plus.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: BatteryLevelPage(),
+    );
+  }
+}
+
+class BatteryLevelPage extends StatefulWidget {
+  @override
+  _BatteryLevelPageState createState() => _BatteryLevelPageState();
+}
+
+class _BatteryLevelPageState extends State<BatteryLevelPage> {
+  final Battery _battery = Battery();
+  double _batteryLevel = 0.0;
+  String status='';
+  @override
+  void initState() {
+    super.initState();
+    _updateBatteryLevel();
+    _battery.onBatteryStateChanged.listen((BatteryState state) {
+      if(state == BatteryState.full){
+        showToast('充电完成');
+      }
+      if (state == BatteryState.charging) {
+        showToast('手机正在充电');
+        
+      } else if (state == BatteryState.discharging) {
+        showToast('手机正在放电');
+      }
+
+      _updateBatteryLevel();
+    });
+  }
+  void _updateBatteryLevel() {
+    _battery.batteryLevel.then((level) {
+      print("$level");
+      setState(() {
+        _batteryLevel = level / 100;
+      });
+    });
+  }
+
+  void showToast(String message) {
+    print('显示${message}');
+    setState(() {
+      status = message;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    print(_batteryLevel);
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('电量监控'),
+      ),
+      body: Center(
+        child: Text(
+          '当前电量：${(_batteryLevel * 100).toStringAsFixed(2)}%\n'+
+          '$status',
+          style: const TextStyle(fontSize: 20),
+          textAlign: TextAlign.center,
+        ),
+      ),
+    );
+  }
+}
+```
 
