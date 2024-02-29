@@ -8,4 +8,8 @@ module.exports = [
     text:'vue 代码编辑器案例',
     link:'/vue/code-edit.md'
   },
+  {
+    text:'vue相关',
+    link:'/vue/vue相关.md'
+  }
 ]

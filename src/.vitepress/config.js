@@ -66,6 +66,11 @@ export default {
         link: '/projects/vite_vue2.md'
       },
       {
+        text: '浏览器书签',
+        link: '/bookmark/technology-doc.md'
+        
+      },
+      {
         text: 'Node',
         link: '/node/vm模块.md'
       },
@@ -102,6 +107,18 @@ export default {
           text: '指南',
           collapsible: true,
           items: guideList,
+        }
+      ],
+      '/bookmark':[
+        {
+          text: '浏览器书签',
+          collapsible: true,
+          items: [
+            {
+              text: '技术文档',
+              link: '/bookmark/technology-doc.md'
+            }
+          ],
         }
       ],
       '/vue': [

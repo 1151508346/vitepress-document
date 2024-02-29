@@ -11,4 +11,8 @@ module.exports = [
     text: 'react 中实现的代码片段',
     link: '/react/react-study.md'
   },
+  {
+    text: 'react 相关问题',
+    link: '/react/react-question.md'
+  },
 ]
