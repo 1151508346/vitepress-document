@@ -33,7 +33,7 @@
 - [胖纸很理智 - 知乎](https://www.zhihu.com/people/marvelcap/posts)
 - [一次完整的HTTP请求过程 - nd - 博客园](https://www.cnblogs.com/tylerdonet/p/11613455.html)
 - [行走的小bug - 知乎](https://www.zhihu.com/people/xiao-qi-e-68-45)
-- [看完这几道 JavaScript 面试题，让你与考官对答如流（上）]([#_23](https://blog.csdn.net/qq449245884/article/details/103901182#_23))
+- - [看完这几道 JavaScript 面试题，让你与考官对答如流（上）](https://blog.csdn.net/qq449245884/article/details/103901182#_23)
 - [总结 scripts 阻塞 HTML 解析 - 掘金](https://juejin.cn/post/7027673904927735822)
 - [浏览器是如何解析html的？ - 掘金](https://juejin.cn/post/6844903745730396174)
 - [「VScode 恢复被删除的文件」 - 知乎](https://zhuanlan.zhihu.com/p/654474035)
@@ -66,14 +66,14 @@
 - [长度单位px、vp、fp](http://www.taodudu.cc/news/show-3694687.html?action=onClick)
 - [分辨率与像素密度](http://www.360doc.com/content/15/0905/20/11130319_497106662.shtml)
 - [使用pdfjs获取pdf目录以及预览pdf，点击目录滚动到对应的位置_前端代码导入pdf文件 点击目录跳转到对应位置-CSDN博客](https://blog.csdn.net/qq_41318044/article/details/130006919)
-- [新标签页](chrome://newtab/)
-- [九种跨域方式实现原理（完整版） - 掘金](#heading-11)
+- [九种跨域方式实现原理（完整版） - 掘金](https://juejin.cn/post/6844903767226351623#heading-11)
 - [CSS也能实现瀑布流布局？ - 掘金](https://juejin.cn/post/7254020450161770557)
 - [参考手册_非常教程-学习编程技术，必备手册](http://www.verydoc.net/manual/)
 - [作用域和闭包-CSDN博客](https://blog.csdn.net/wangxinxin1992816/article/details/120194872)
 - [作用域和闭包_作用域、闭包-CSDN博客](https://blog.csdn.net/qq_45812595/article/details/128867543)
 - [tsconfig.json各配置属性详解-CSDN博客](https://blog.csdn.net/My_Soul_/article/details/128790350)
 - [GitHub的2FA验证问题解决工具_github双认证不能用了-CSDN博客](https://blog.csdn.net/cl939974883/article/details/135252857)
+
 
 
 
