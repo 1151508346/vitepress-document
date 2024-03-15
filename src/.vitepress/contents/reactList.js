@@ -14,5 +14,8 @@ module.exports = [
   {
     text: 'react 相关问题',
     link: '/react/react-question.md'
-  },
+  },{
+    text:'简易版react-hooks原理',
+    link: '/react/react-hooks原理.md'
+  }
 ]
