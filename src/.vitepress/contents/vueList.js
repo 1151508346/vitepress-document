@@ -11,5 +11,8 @@ module.exports = [
   {
     text:'vue相关',
     link:'/vue/vue相关.md'
+  },{
+    text:'vue中使用docxtemplater导出word',
+    link:'/vue/vue中使用docxtemplater导出word.md'
   }
 ]
