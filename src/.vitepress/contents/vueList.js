@@ -14,5 +14,9 @@ module.exports = [
   },{
     text:'vue中使用docxtemplater导出word',
     link:'/vue/vue中使用docxtemplater导出word.md'
+  },{
+    text:'v-model在tsx中的写法',
+    link:'/vue/v-model在tsx中的写法.md'
+    
   }
 ]
