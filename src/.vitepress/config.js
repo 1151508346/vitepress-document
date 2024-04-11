@@ -87,6 +87,10 @@ export default {
           link:'/flutter/flutter搭建.md'
       },
       {
+        text:'linux',
+        link: '/linux/1第一章 Linux 入门概述/第一章 Linux 入门概述.md'
+      },
+      {
         text: '面试题',
         items: [
           { text: '混乱的', link: '/mianshi/hunluan/quiteStart' },
@@ -148,6 +152,35 @@ export default {
               text: 'commonjs',
               link: '/node/common.md'
             }
+          ]
+        }
+      ],
+      '/linux/': [
+        {
+          text: 'linux',
+          collapsible: true,
+          items: [
+            {
+              text: '第一章 Linux 入门概述',
+              link: '/linux/1第一章 Linux 入门概述/第一章 Linux 入门概述.md'
+            },
+            {
+              text: '第二章 Linux虚拟机的安装部署',
+              link: '/linux/2第二章 Linux虚拟机的安装部署/第二章 Linux虚拟机的安装部署.md'
+            },
+            {
+              text: '第三章 常见Linux命令',
+              link: '/linux/3第三章 常见Linux命令/第三章 常见Linux命令.md'
+            },
+            {
+              text: '第四章 大数据开发扩展shell',
+              link: 'linux/4第四章 生产开发使用扩展/大数据开发扩展shell/大数据开发扩展shell.md'
+            },
+            {
+              text: '第四章 java开发扩展软件包与安装',
+              link: 'linux/4第四章 生产开发使用扩展/java开发扩展软件包与安装/java开发扩展软件包与安装.md'
+            }
+            
           ]
         }
       ],
