@@ -205,7 +205,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 
 运行级别6：系统正常关闭并重启，默认运行级别不能设为6，否则不能正常启动
 
-![](image\service1_gFcZwwFe4P.png)
+![](image/service1_gFcZwwFe4P.png)
 
 # 第三节 文件目录类命令
 
@@ -649,7 +649,7 @@ Linux系统有7种运行级别(runlevel)：常用的是级别3和5(CentOS7中只
 [root@192 ~]# cd /root/
 ```
 
-![](C:/Users/merge/Desktop/%E7%83%AD%E9%97%A8%E8%A7%86%E9%A2%91_linux/Linux/2%E7%AC%AC%E4%BA%8C%E7%AB%A0%20Linux%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2/image/vim_UgjmoDsYSb.png)
+<!-- ![](C:/Users/merge/Desktop/%E7%83%AD%E9%97%A8%E8%A7%86%E9%A2%91_linux/Linux/2%E7%AC%AC%E4%BA%8C%E7%AB%A0%20Linux%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2/image/vim_UgjmoDsYSb.png) -->
 
 ## 2. VIM的一般模式
 

@@ -8,7 +8,7 @@
 
 # 第一节 Shell概述
 
-![](image\Snipaste_2023-11-20_14-17-49.png)
+![](image/Snipaste_2023-11-20_14-17-49.png)
 
 **1**）**Linux提供的Shell解析器有：**
 

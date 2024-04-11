@@ -63,7 +63,7 @@ Linux是一款开源、高效、稳定、安全漏洞少的操作系统，对程
 
 > PC端Windows和服务端Linux对比
 
-![](image/pcLinux对比_Ib2i1i7C5L.png)
+![](image/pcLinux_Ib2i1i7C5L.png)
 
 # 第五节 Linux的常见版本
 

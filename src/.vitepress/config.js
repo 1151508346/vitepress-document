@@ -169,6 +169,10 @@ export default {
               link: '/linux/2第二章 Linux虚拟机的安装部署/第二章 Linux虚拟机的安装部署.md'
             },
             {
+              text: '第二章 拓展 Linux阿里云ECS的安装部署',
+              link: '/linux/2第二章拓展 Linux阿里云ECS的安装部署/第二章拓展 Linux阿里云ECS的安装部署.md'
+            },
+            {
               text: '第三章 常见Linux命令',
               link: '/linux/3第三章 常见Linux命令/第三章 常见Linux命令.md'
             },
