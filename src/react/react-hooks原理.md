@@ -324,7 +324,7 @@ render();
 会浏览器渲染
 - useEffect会在浏览器渲染结束后执⾏,useLayoutEffect
 则是在 DOM 更新完成后,浏览器绘制之前执⾏
- 
+
 ### 7.1 使⽤
 ```jsx
 import React from 'react';
@@ -562,3 +562,27 @@ function render(){
 }
 render();
 ```
+
+## useSelector
+
+```js
+function useSelector(callback){
+  const [state,setState] = useState(store.getState())
+  store.subscribe(() => {
+    setState(store.getState)
+  })
+  return callback(state)
+}
+```
+
+
+
+## useDispatch
+
+```js
+function useDispatch(){
+  return store.dispatch;
+}
+
+```
+
