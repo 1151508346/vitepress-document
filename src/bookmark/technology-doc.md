@@ -73,7 +73,7 @@
 - [作用域和闭包_作用域、闭包-CSDN博客](https://blog.csdn.net/qq_45812595/article/details/128867543)
 - [tsconfig.json各配置属性详解-CSDN博客](https://blog.csdn.net/My_Soul_/article/details/128790350)
 - [GitHub的2FA验证问题解决工具_github双认证不能用了-CSDN博客](https://blog.csdn.net/cl939974883/article/details/135252857)
-
+- [深入浅出webpack之使用 SplitChunks提升性能](https://www.bilibili.com/opus/790335374933098562?spm_id_from=333.999.0.0)
 
 
 
