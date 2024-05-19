@@ -1645,7 +1645,7 @@ const animation = (duration, from, to, onProgress) => {
 
 ```
 
-## 单位转化函数
+## 62、单位转化函数
 ```js
 /**
  * 
@@ -1705,4 +1705,79 @@ const processFn = (map: { [s: string]: any }, v: number, u?: string) => {
   const r = processFn(map, 2603, 'KB');
   console.log(r,'r')
 }());
+```
+## 63、Websocket心跳机制，断线重连
+```js
+class WebSocket {
+  ws = null;
+  reconnectTimer = null;
+  heartBeat = {            // 心跳连接的时间设置
+    time: 5 * 1000,      // 心跳时间间隔
+    timeout: 3 * 1000,   // timeout：心跳超时间隔（!要少于心跳间隔）
+    reconnect: 10 * 1000  // 断线重连时间
+  };
+  onclose() {
+    this.ws.close();              //关闭webSocket连接
+    this.webSocketState = false;  //关闭状态
+    this.heartBeat.time = null;   //停止心跳
+    if (this.reconnectTimer) {    //关闭重连
+      clearInterval(this.reconnectTimer);
+    }
+  }
+  //socket链接
+  connectWebSocket() {
+    let url = `wss://ws://baidu.com/msg/${this.userInfo.userId}`;
+    this.ws = new WebSocket(url);
+    this.init();  //初始化
+  }
+  init() {
+    this.ws.addEventListener('open', () => {
+      // eslint-disable-next-line spaced-comment
+      this.webSocketState = true; //socket状态设置为连接，做为后面的断线重连的拦截器
+      // eslint-disable-next-line no-unused-expressions
+      console.log('开启');
+      this.heartBeat && this.heartBeat.time ? this.startHeartBeat(this.heartBeat.time) : ''; // 是否启动心跳机制
+    });
+    this.ws.addEventListener('message', (e) => {
+      this.webSocketState = true;
+      console.log(JSON.parse(e.data), '信息')
+    });
+    this.ws.addEventListener('close', (e) => {
+      this.webSocketState = false; // socket状态设置为断线
+      console.log('断开了连接');
+    });
+    this.ws.addEventListener('error', (e) => {
+      this.webSocketState = false; // socket状态设置为断线
+      this.reconnectWebSocket(); // 重连
+      console.log('连接发生了错误');
+    });
+  }
+  // 心跳  time:心跳时间间隔
+  startHeartBeat(time) {
+    setTimeout(() => {
+      //这里设置这是你要发送的内容
+      // let data = {};
+      // data.lon = this.lc.longitude;            //已省略获取地址步骤
+      // data.lat = this.lc.latitude;
+      this.ws.send(JSON.stringify(data))       //发送数据
+      this.waitingServer();
+    }, time);
+  }
+  // 延时等待服务端响应，通过webSocketState判断是否连线成功
+  waitingServer() {
+    // this.webSocketState = false;
+    setTimeout(() => {
+      if (this.webSocketState) {
+        this.startHeartBeat(this.heartBeat.time);
+        return;
+      }
+      console.log('心跳无响应，已断线');
+      try {
+        this.ws.close();
+      } catch (e) {
+        console.log('连接已关闭，无需关闭');
+      }
+      this.reconnectWebSocket();  //非主动关闭导致，触发重连
+    }, this.heartBeat.timeout);
+  }
 ```
