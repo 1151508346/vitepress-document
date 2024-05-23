@@ -1781,3 +1781,23 @@ class WebSocket {
     }, this.heartBeat.timeout);
   }
 ```
+
+## 64 url路径处理
+
+```js
+ function processPath(url,query={}){
+     if(!url.includes('?')){
+         return url + '?' + Object.entries(query).map(([k,v]) => `${k}=${v}`).join('&')
+     }
+     const [path,search] = url.split('?')
+     const defaultQuerys = search.split('&').filter(Boolean).reduce((memo,next) => {
+         const [k,v]  = next.split('=')
+         if(k){
+             memo.push({k,v});
+         }
+         return memo;
+     },[...Object.entries(query).map(([k,v]) => ({k,v}))]);
+     return path + '?' + defaultQuerys.map(item => `${item.k}=${item.v}`).join('&')
+ }
+```
+
