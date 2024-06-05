@@ -86,9 +86,15 @@ export default {
           text:'flutter',
           link:'/flutter/flutter搭建.md'
       },
+      
       {
-        text:'linux',
-        link: '/linux/1第一章 Linux 入门概述/第一章 Linux 入门概述.md'
+        text: 'linux',
+        items: [
+          { text: 'linux基础笔记', link: '/linux/linux基础笔记/1第一章 Linux 入门概述/第一章 Linux 入门概述.md' },
+          { text: 'linux零散知识点', link: '/linux/linux零散知识点.md' },
+          // { text: 'Item B', link: '/item-2' },
+          // { text: 'Item C', link: '/item-3' }
+        ]
       },
       {
         text: '面试题',
@@ -155,36 +161,48 @@ export default {
           ]
         }
       ],
-      '/linux/': [
+      '/linux/linux基础笔记/': [
         {
           text: 'linux',
           collapsible: true,
           items: [
             {
               text: '第一章 Linux 入门概述',
-              link: '/linux/1第一章 Linux 入门概述/第一章 Linux 入门概述.md'
+              link: '/linux/linux基础笔记/1第一章 Linux 入门概述/第一章 Linux 入门概述.md'
             },
             {
               text: '第二章 Linux虚拟机的安装部署',
-              link: '/linux/2第二章 Linux虚拟机的安装部署/第二章 Linux虚拟机的安装部署.md'
+              link: '/linux/linux基础笔记/2第二章 Linux虚拟机的安装部署/第二章 Linux虚拟机的安装部署.md'
             },
             {
               text: '第二章 拓展 Linux阿里云ECS的安装部署',
-              link: '/linux/2第二章拓展 Linux阿里云ECS的安装部署/第二章拓展 Linux阿里云ECS的安装部署.md'
+              link: '/linux/linux基础笔记/2第二章拓展 Linux阿里云ECS的安装部署/第二章拓展 Linux阿里云ECS的安装部署.md'
             },
             {
               text: '第三章 常见Linux命令',
-              link: '/linux/3第三章 常见Linux命令/第三章 常见Linux命令.md'
+              link: '/linux/linux基础笔记/3第三章 常见Linux命令/第三章 常见Linux命令.md'
             },
             {
               text: '第四章 大数据开发扩展shell',
-              link: 'linux/4第四章 生产开发使用扩展/大数据开发扩展shell/大数据开发扩展shell.md'
+              link: 'linux/linux基础笔记/4第四章 生产开发使用扩展/大数据开发扩展shell/大数据开发扩展shell.md'
             },
             {
               text: '第四章 java开发扩展软件包与安装',
-              link: 'linux/4第四章 生产开发使用扩展/java开发扩展软件包与安装/java开发扩展软件包与安装.md'
+              link: 'linux/linux基础笔记/4第四章 生产开发使用扩展/java开发扩展软件包与安装/java开发扩展软件包与安装.md'
             }
             
+          ]
+        }
+      ],
+      '/linux/': [
+        {
+          text: 'linux',
+          collapsible: true,
+          items: [
+            {
+              text: 'linux零散知识点',
+              link: '/linux/linux零散知识点.md'
+            }
           ]
         }
       ],
