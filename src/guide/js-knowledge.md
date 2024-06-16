@@ -1782,7 +1782,7 @@ class WebSocket {
   }
 ```
 
-## 64 url路径处理
+## 64、url路径处理
 
 ```js
  function processPath(url,query={}){
@@ -1799,5 +1799,35 @@ class WebSocket {
      },[...Object.entries(query).map(([k,v]) => ({k,v}))]);
      return path + '?' + defaultQuerys.map(item => `${item.k}=${item.v}`).join('&')
  }
+```
+## 65、浏览器打印指定的div内容
+```js
+function printContent(id,title){
+// 创建新的浏览器窗口
+  const printWindow = window.open('', '_blank');
+  // 获取div的内容
+  const divContent = document.getElementById((id)).innerHTML;
+  // 写入内容到新窗口
+  printWindow.document.write(`
+    <html>
+      <head>
+        <title>${title}</title>
+      </head>
+      <body >
+      ${divContent}
+      </body>
+    </html>
+  `);
+  printWindow.document.write(`<html><head><title>${title}</title>`);
+  printWindow.document.write('</head><body >');
+  printWindow.document.write(divContent);
+  printWindow.document.write('</body></html>');
+  // 关闭文档对于写操作的准备
+  printWindow.document.close();
+  printWindow.onload = () => { 
+    // 调用打印方法
+    printWindow.print();
+  }
+}
 ```
 
