@@ -769,6 +769,36 @@ console.log(add(1, 2)(3)())
 ```
 
 ## 23、实现一个合格的深拷贝
+
+```js
+function deepClone(obj,hash=new WeakMap()){
+  if(typeof obj === null || typeof obj !== 'object') {
+    return obj;
+  }
+  if(hash.has(obj)){
+    return hash.get(obj)
+  }
+  if(obj instanceof Date){
+    return new Date(obj)
+  }
+  if(obj instanceof RegExp){
+    return new RegExp(obj)
+  }
+  const cloneObj = new obj.constructor();
+  hash.set(obj,cloneObj)
+
+  for(let k in obj){
+    if(obj.hasOwnProperty(k)){
+      cloneObj[k] = deepClone(obj[k],hash)
+    }
+  }
+  return cloneObj
+}
+
+```
+
+
+
 ## 24、实现 Promise
 ## 25、实现 async/await
 > Array篇
@@ -1818,10 +1848,10 @@ function printContent(id,title){
       </body>
     </html>
   `);
-  printWindow.document.write(`<html><head><title>${title}</title>`);
-  printWindow.document.write('</head><body >');
-  printWindow.document.write(divContent);
-  printWindow.document.write('</body></html>');
+  //printWindow.document.write(`<html><head><title>${title}</title>`);
+  //printWindow.document.write('</head><body >');
+  //printWindow.document.write(divContent);
+  //printWindow.document.write('</body></html>');
   // 关闭文档对于写操作的准备
   printWindow.document.close();
   printWindow.onload = () => { 
