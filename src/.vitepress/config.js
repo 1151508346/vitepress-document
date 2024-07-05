@@ -101,7 +101,6 @@ export default {
         items: [
           { text: '混乱的', link: '/mianshi/hunluan/quiteStart' },
           { text: '前端面试八股文', link: '/mianshi/interviewer/quiteStart' },
-          // { text: 'Item B', link: '/item-2' },
           // { text: 'Item C', link: '/item-3' }
         ]
       },
@@ -255,7 +254,8 @@ export default {
           collapsible: true,
           items: interviewerList
         }
-      ]
+      ],
+      
     }
   }
 }

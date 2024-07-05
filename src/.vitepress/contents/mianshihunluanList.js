@@ -8,4 +8,5 @@ module.exports = [
     {text:'浏览器工作原理与实践',link:'/mianshi/hunluan/browser-principle.md'},
     {text:'【图解 Google V8】学习笔记合集 23 篇（完结）',link:'/mianshi/hunluan/tujie-google-v8.md'},
     {text:'vue3企业级项目实战',link:'/mianshi/hunluan/vue3企业级项目实战.md'},
+    {text:'自己面试总结题',link:'/mianshi/hunluan/自己面试总结题.md'}
 ];
