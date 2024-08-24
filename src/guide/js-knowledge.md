@@ -1861,3 +1861,35 @@ function printContent(id,title){
 }
 ```
 
+## 66、判断是否是一个快乐数
+```js
+//  方案1
+function isHappyNumber(num) {
+    let seen = new Set();
+    while (num !== 1 && !seen.has(num)) {
+        seen.add(num);
+        num = num.toString().split('').reduce((acc, digit) => acc + Math.pow(parseInt(digit, 10), 2), 0);
+    }
+    return num === 1;
+}
+
+console.log(isHappyNumber(19)); // 输出: true
+console.log(isHappyNumber(4));  // 输出: false
+
+//  方案2
+function isHappyNumber(num){
+  const getNext = (n) => {
+    return (''+n).split('').reduce((memo,next) => memo + Math.pow(parseInt(next),2) ,0)
+  }
+  let first = num, second = getNext(num)
+  while(second !== 1 && first !== second){
+    first = getNext(first)
+    second = getNext(getNext(second))
+  }
+  return second === 1;
+}
+
+const r = isHappyNumber(48) // false
+// const r = isHappyNumber(19)  //true
+console.log(r,'r')
+```

@@ -532,5 +532,5 @@ console.log(peak(heap));
 
 ```
 
-
-
+## 前端算法入门三：5大排序算法&2大搜索&4大算法思想
+[https://juejin.cn/post/7088725301974269960#heading-11](https://juejin.cn/post/7088725301974269960#heading-11)
