@@ -6,6 +6,8 @@ const mianshihunluanList = require('./contents/mianshihunluanList');
 const interviewerList = require('./contents/interviewerList')
 const vueList = require('./contents/vueList');
 const reactList = require('./contents/reactList');
+const vueInterviewerList = require('./contents/vueInterviewerList')
+
 
 
 const logoPath = (logo) => {
@@ -101,6 +103,7 @@ export default {
         items: [
           { text: '混乱的', link: '/mianshi/hunluan/quiteStart' },
           { text: '前端面试八股文', link: '/mianshi/interviewer/quiteStart' },
+          { text: 'Vue经典面试题', link: '/mianshi/vue-interviewer/6.请说一下你对响应式数据的理解.md' },
           // { text: 'Item C', link: '/item-3' }
         ]
       },
@@ -253,6 +256,13 @@ export default {
           text: '面试题/前端面试八股文',
           collapsible: true,
           items: interviewerList
+        }
+      ],
+      '/mianshi/vue-interviewer/': [
+        {
+          text: '面试题/vue经典面试题',
+          collapsible: true,
+          items: vueInterviewerList
         }
       ],
       
