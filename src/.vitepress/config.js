@@ -6,10 +6,14 @@ const mianshihunluanList = require('./contents/mianshihunluanList');
 const interviewerList = require('./contents/interviewerList')
 const vueList = require('./contents/vueList');
 const reactList = require('./contents/reactList');
-const vueInterviewerList = require('./contents/vueInterviewerList')
+const { getMenuList } = require('./contents/utils')
+const {glob, sync} = require('glob');
+const list = sync('src/mianshi/vue-interviewer/*.md',{
+  ignore: 'node_modules/**'
+})
 
-
-
+const vueInterviewerList = getMenuList(list).sort((a,b) => a.text[0] - b.text[0])
+console.log(vueInterviewerList,'vueInterviewerList')
 const logoPath = (logo) => {
   const { NODE_ENV } = process.env;
   let filePath = ''
