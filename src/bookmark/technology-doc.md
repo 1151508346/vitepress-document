@@ -74,9 +74,16 @@
 - [tsconfig.json各配置属性详解-CSDN博客](https://blog.csdn.net/My_Soul_/article/details/128790350)
 - [GitHub的2FA验证问题解决工具_github双认证不能用了-CSDN博客](https://blog.csdn.net/cl939974883/article/details/135252857)
 - [深入浅出webpack之使用 SplitChunks提升性能](https://www.bilibili.com/opus/790335374933098562?spm_id_from=333.999.0.0)
-
-
-
+- [vscode中配置git-bash ](https://www.jb51.net/program/290472sov.htm)
+- [Turborepo & father & pnpm & lerna 搭建前端组件库经验分享](https://blog.csdn.net/luoluoyang23/article/details/129338613)
+- [Taro多端自定义导航栏Navbar+Tabbar实例 ](https://www.cnblogs.com/xiaoyan2017/p/11937043.html)
+- [cc-compare:代码比对工具下载](https://gitee.com/cxasm/cc-compare)
+- [winmerge 代码比对工具下载](https://sourceforge.net/projects/winmerge/)
+- [winmerge 代码比对工具下载](https://winmerge.org/downloads/?lang=en)
+- [国内外公共CDN静态资源网站大全](https://www.cnblogs.com/HGNET/p/15847872.html)
+- [根据图片计算出主色的js库：color-thief](https://lokeshdhakar.com/projects/color-thief/)
+- [vue3.5新特性]( https://www.51cto.com/article/796302.html)
+- [vue3.5新特性](https://blog.vuejs.org/posts/vue-3-5#onwatchercleanup)
 
 
 
