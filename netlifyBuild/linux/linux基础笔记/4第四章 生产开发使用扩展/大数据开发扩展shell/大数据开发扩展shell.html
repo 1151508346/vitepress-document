@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>大数据开发扩展shell | 首页</title>
+    <meta name="description" content="这是一个联系vitePress的文档">
+    <link rel="stylesheet" href="/assets/style.69a94529.css">
+    <link rel="modulepreload" href="/assets/chunks/_virtual_search-data.5a4159f9.js">
+    <link rel="modulepreload" href="/assets/chunks/ui-custom.64f70552.js">
+    <link rel="modulepreload" href="/assets/app.580fb14e.js">
+    <link rel="modulepreload" href="/assets/linux_linux基础笔记_4第四章 生产开发使用扩展_大数据开发扩展shell_大数据开发扩展shell.md.fd1ec4c0.lean.js">
+    
+    <script>(()=>{const e=localStorage.getItem("vitepress-theme-appearance"),a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
+  </head>
+  <body>
+    <div id="app"><div class="Layout" data-v-6b5fd0a9><!--[--><!--]--><!--[--><span tabindex="-1" data-v-45f6ae50></span><a href="#VPContent" class="VPSkipLink visually-hidden" data-v-45f6ae50> Skip to content </a><!--]--><!----><header class="VPNav" data-v-6b5fd0a9 data-v-0e356168><div class="VPNavBar has-sidebar" data-v-0e356168 data-v-8856f192><div class="container" data-v-8856f192><div class="VPNavBarTitle has-sidebar" data-v-8856f192 data-v-6a6f7ff6><a class="title" href="/" data-v-6a6f7ff6><!--[--><img class="VPImage logo" src="/test-bg.png" data-v-73ae1788><!--]--><!--[-->首页<!--]--></a></div><div class="content" data-v-8856f192><div class="VPNavBarSearch search" data-v-8856f192><!----><div id="docsearch"><button type="button" class="DocSearch DocSearch-Button" aria-label="Search"><span class="DocSearch-Button-Container"><svg width="20" height="20" class="DocSearch-Search-Icon" viewBox="0 0 20 20"><path d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z" stroke="currentColor" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg><span class="DocSearch-Button-Placeholder">Search</span></span><span class="DocSearch-Button-Keys"><span class="DocSearch-Button-Key">Meta</span><span class="DocSearch-Button-Key">K</span></span></button></div></div><nav aria-labelledby="main-nav-aria-label" class="VPNavBarMenu menu" data-v-8856f192 data-v-a30758ee><span id="main-nav-aria-label" class="visually-hidden" data-v-a30758ee>Main Navigation</span><!--[--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/guide/installation.html" data-v-a30758ee data-v-8fba5fa8 data-v-5704c677><!--[-->指南<!--]--><!----></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/projects/vite_vue2.html" data-v-a30758ee data-v-8fba5fa8 data-v-5704c677><!--[-->项目搭建<!--]--><!----></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/bookmark/technology-doc.html" data-v-a30758ee data-v-8fba5fa8 data-v-5704c677><!--[-->浏览器书签<!--]--><!----></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/node/vm%E6%A8%A1%E5%9D%97.html" data-v-a30758ee data-v-8fba5fa8 data-v-5704c677><!--[-->Node<!--]--><!----></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/vue/vue.3.3%E6%96%B0%E7%89%B9%E6%80%A7.html" data-v-a30758ee data-v-8fba5fa8 data-v-5704c677><!--[-->Vue<!--]--><!----></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/react/react%E4%B8%AD%E5%AE%9E%E7%8E%B0%E6%8F%92%E6%A7%BD.html" data-v-a30758ee data-v-8fba5fa8 data-v-5704c677><!--[-->React<!--]--><!----></a><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/flutter/flutter%E6%90%AD%E5%BB%BA.html" data-v-a30758ee data-v-8fba5fa8 data-v-5704c677><!--[-->flutter<!--]--><!----></a><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-a30758ee data-v-8dccea88><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-8dccea88><span class="text" data-v-8dccea88><!----> linux <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="text-icon" data-v-8dccea88><path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z"></path></svg></span></button><div class="menu" data-v-8dccea88><div class="VPMenu" data-v-8dccea88 data-v-e73581a2><div class="items" data-v-e73581a2><!--[--><!--[--><div class="VPMenuLink" data-v-e73581a2 data-v-06b18c43><a class="VPLink link" href="/linux/linux%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/1%E7%AC%AC%E4%B8%80%E7%AB%A0%20Linux%20%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/%E7%AC%AC%E4%B8%80%E7%AB%A0%20Linux%20%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0.html" data-v-06b18c43 data-v-5704c677><!--[-->linux基础笔记<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-e73581a2 data-v-06b18c43><a class="VPLink link" href="/linux/linux%E9%9B%B6%E6%95%A3%E7%9F%A5%E8%AF%86%E7%82%B9.html" data-v-06b18c43 data-v-5704c677><!--[-->linux零散知识点<!--]--><!----></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><div class="VPFlyout VPNavBarMenuGroup" data-v-a30758ee data-v-8dccea88><button type="button" class="button" aria-haspopup="true" aria-expanded="false" data-v-8dccea88><span class="text" data-v-8dccea88><!----> 面试题 <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="text-icon" data-v-8dccea88><path d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z"></path></svg></span></button><div class="menu" data-v-8dccea88><div class="VPMenu" data-v-8dccea88 data-v-e73581a2><div class="items" data-v-e73581a2><!--[--><!--[--><div class="VPMenuLink" data-v-e73581a2 data-v-06b18c43><a class="VPLink link" href="/mianshi/hunluan/quiteStart.html" data-v-06b18c43 data-v-5704c677><!--[-->混乱的<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-e73581a2 data-v-06b18c43><a class="VPLink link" href="/mianshi/interviewer/quiteStart.html" data-v-06b18c43 data-v-5704c677><!--[-->前端面试八股文<!--]--><!----></a></div><!--]--><!--[--><div class="VPMenuLink" data-v-e73581a2 data-v-06b18c43><a class="VPLink link" href="/mianshi/vue-interviewer/6.%E8%AF%B7%E8%AF%B4%E4%B8%80%E4%B8%8B%E4%BD%A0%E5%AF%B9%E5%93%8D%E5%BA%94%E5%BC%8F%E6%95%B0%E6%8D%AE%E7%9A%84%E7%90%86%E8%A7%A3.html" data-v-06b18c43 data-v-5704c677><!--[-->Vue经典面试题<!--]--><!----></a></div><!--]--><!--]--></div><!--[--><!--]--></div></div></div><!--]--><!--[--><a class="VPLink link VPNavBarMenuLink" href="/component/icon.html" data-v-a30758ee data-v-8fba5fa8 data-v-5704c677><!--[-->组件<!--]--><!----></a><!--]--><!--]--></nav><!----><div class="VPNavBarAppearance appearance" data-v-8856f192 data-v-311055f2><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" aria-label="toggle dark mode" data-v-311055f2 data-v-781f9d1b data-v-1dda4c9c><span class="check" data-v-1dda4c9c><span class="icon" data-v-1dda4c9c><!--[--><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="sun" data-v-781f9d1b><path d="M12,18c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6S15.3,18,12,18zM12,8c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4C16,9.8,14.2,8,12,8z"></path><path d="M12,4c-0.6,0-1-0.4-1-1V1c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,3.6,12.6,4,12,4z"></path><path d="M12,24c-0.6,0-1-0.4-1-1v-2c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,23.6,12.6,24,12,24z"></path><path d="M5.6,6.6c-0.3,0-0.5-0.1-0.7-0.3L3.5,4.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C6.2,6.5,5.9,6.6,5.6,6.6z"></path><path d="M19.8,20.8c-0.3,0-0.5-0.1-0.7-0.3l-1.4-1.4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C20.3,20.7,20,20.8,19.8,20.8z"></path><path d="M3,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S3.6,13,3,13z"></path><path d="M23,13h-2c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path><path d="M4.2,20.8c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C4.7,20.7,4.5,20.8,4.2,20.8z"></path><path d="M18.4,6.6c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C18.9,6.5,18.6,6.6,18.4,6.6z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="moon" data-v-781f9d1b><path d="M12.1,22c-0.3,0-0.6,0-0.9,0c-5.5-0.5-9.5-5.4-9-10.9c0.4-4.8,4.2-8.6,9-9c0.4,0,0.8,0.2,1,0.5c0.2,0.3,0.2,0.8-0.1,1.1c-2,2.7-1.4,6.4,1.3,8.4c2.1,1.6,5,1.6,7.1,0c0.3-0.2,0.7-0.3,1.1-0.1c0.3,0.2,0.5,0.6,0.5,1c-0.2,2.7-1.5,5.1-3.6,6.8C16.6,21.2,14.4,22,12.1,22zM9.3,4.4c-2.9,1-5,3.6-5.2,6.8c-0.4,4.4,2.8,8.3,7.2,8.7c2.1,0.2,4.2-0.4,5.8-1.8c1.1-0.9,1.9-2.1,2.4-3.4c-2.5,0.9-5.3,0.5-7.5-1.1C9.2,11.4,8.1,7.7,9.3,4.4z"></path></svg><!--]--></span></span></button></div><!----><div class="VPFlyout VPNavBarExtra extra" data-v-8856f192 data-v-0562f5c0 data-v-8dccea88><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-8dccea88><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="icon" data-v-8dccea88><circle cx="12" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle><circle cx="5" cy="12" r="2"></circle></svg></button><div class="menu" data-v-8dccea88><div class="VPMenu" data-v-8dccea88 data-v-e73581a2><!----><!--[--><!--[--><!----><div class="group" data-v-0562f5c0><div class="item appearance" data-v-0562f5c0><p class="label" data-v-0562f5c0>Appearance</p><div class="appearance-action" data-v-0562f5c0><button class="VPSwitch VPSwitchAppearance" type="button" role="switch" aria-label="toggle dark mode" data-v-0562f5c0 data-v-781f9d1b data-v-1dda4c9c><span class="check" data-v-1dda4c9c><span class="icon" data-v-1dda4c9c><!--[--><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="sun" data-v-781f9d1b><path d="M12,18c-3.3,0-6-2.7-6-6s2.7-6,6-6s6,2.7,6,6S15.3,18,12,18zM12,8c-2.2,0-4,1.8-4,4c0,2.2,1.8,4,4,4c2.2,0,4-1.8,4-4C16,9.8,14.2,8,12,8z"></path><path d="M12,4c-0.6,0-1-0.4-1-1V1c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,3.6,12.6,4,12,4z"></path><path d="M12,24c-0.6,0-1-0.4-1-1v-2c0-0.6,0.4-1,1-1s1,0.4,1,1v2C13,23.6,12.6,24,12,24z"></path><path d="M5.6,6.6c-0.3,0-0.5-0.1-0.7-0.3L3.5,4.9c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C6.2,6.5,5.9,6.6,5.6,6.6z"></path><path d="M19.8,20.8c-0.3,0-0.5-0.1-0.7-0.3l-1.4-1.4c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l1.4,1.4c0.4,0.4,0.4,1,0,1.4C20.3,20.7,20,20.8,19.8,20.8z"></path><path d="M3,13H1c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S3.6,13,3,13z"></path><path d="M23,13h-2c-0.6,0-1-0.4-1-1s0.4-1,1-1h2c0.6,0,1,0.4,1,1S23.6,13,23,13z"></path><path d="M4.2,20.8c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C4.7,20.7,4.5,20.8,4.2,20.8z"></path><path d="M18.4,6.6c-0.3,0-0.5-0.1-0.7-0.3c-0.4-0.4-0.4-1,0-1.4l1.4-1.4c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-1.4,1.4C18.9,6.5,18.6,6.6,18.4,6.6z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="moon" data-v-781f9d1b><path d="M12.1,22c-0.3,0-0.6,0-0.9,0c-5.5-0.5-9.5-5.4-9-10.9c0.4-4.8,4.2-8.6,9-9c0.4,0,0.8,0.2,1,0.5c0.2,0.3,0.2,0.8-0.1,1.1c-2,2.7-1.4,6.4,1.3,8.4c2.1,1.6,5,1.6,7.1,0c0.3-0.2,0.7-0.3,1.1-0.1c0.3,0.2,0.5,0.6,0.5,1c-0.2,2.7-1.5,5.1-3.6,6.8C16.6,21.2,14.4,22,12.1,22zM9.3,4.4c-2.9,1-5,3.6-5.2,6.8c-0.4,4.4,2.8,8.3,7.2,8.7c2.1,0.2,4.2-0.4,5.8-1.8c1.1-0.9,1.9-2.1,2.4-3.4c-2.5,0.9-5.3,0.5-7.5-1.1C9.2,11.4,8.1,7.7,9.3,4.4z"></path></svg><!--]--></span></span></button></div></div></div><!----><!--]--><!--]--></div></div></div><button type="button" class="VPNavBarHamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="VPNavScreen" data-v-8856f192 data-v-6f008456><span class="container" data-v-6f008456><span class="top" data-v-6f008456></span><span class="middle" data-v-6f008456></span><span class="bottom" data-v-6f008456></span></span></button></div></div></div><!----></header><div class="VPLocalNav" data-v-6b5fd0a9 data-v-92b0f14a><button class="menu" aria-expanded="false" aria-controls="VPSidebarNav" data-v-92b0f14a><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" viewbox="0 0 24 24" class="menu-icon" data-v-92b0f14a><path d="M17,11H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S17.6,11,17,11z"></path><path d="M21,7H3C2.4,7,2,6.6,2,6s0.4-1,1-1h18c0.6,0,1,0.4,1,1S21.6,7,21,7z"></path><path d="M21,15H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h18c0.6,0,1,0.4,1,1S21.6,15,21,15z"></path><path d="M17,19H3c-0.6,0-1-0.4-1-1s0.4-1,1-1h14c0.6,0,1,0.4,1,1S17.6,19,17,19z"></path></svg><span class="menu-text" data-v-92b0f14a>Menu</span></button><a class="top-link" href="#" data-v-92b0f14a> Return to top </a></div><aside class="VPSidebar" data-v-6b5fd0a9 data-v-55e4c7db><nav class="nav" id="VPSidebarNav" aria-labelledby="sidebar-aria-label" tabindex="-1" data-v-55e4c7db><span class="visually-hidden" id="sidebar-aria-label" data-v-55e4c7db> Sidebar Navigation </span><!--[--><div class="group" data-v-55e4c7db><section class="VPSidebarGroup collapsible" data-v-55e4c7db data-v-1f69a7ed><div class="title" role="button" data-v-1f69a7ed><h2 class="title-text" data-v-1f69a7ed>linux</h2><div class="action" data-v-1f69a7ed><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 24 24" class="icon minus" data-v-1f69a7ed><path d="M19,2H5C3.3,2,2,3.3,2,5v14c0,1.7,1.3,3,3,3h14c1.7,0,3-1.3,3-3V5C22,3.3,20.7,2,19,2zM20,19c0,0.6-0.4,1-1,1H5c-0.6,0-1-0.4-1-1V5c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1V19z"></path><path d="M16,11H8c-0.6,0-1,0.4-1,1s0.4,1,1,1h8c0.6,0,1-0.4,1-1S16.6,11,16,11z"></path></svg><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="icon plus" data-v-1f69a7ed><path d="M19,2H5C3.3,2,2,3.3,2,5v14c0,1.7,1.3,3,3,3h14c1.7,0,3-1.3,3-3V5C22,3.3,20.7,2,19,2z M20,19c0,0.6-0.4,1-1,1H5c-0.6,0-1-0.4-1-1V5c0-0.6,0.4-1,1-1h14c0.6,0,1,0.4,1,1V19z"></path><path d="M16,11h-3V8c0-0.6-0.4-1-1-1s-1,0.4-1,1v3H8c-0.6,0-1,0.4-1,1s0.4,1,1,1h3v3c0,0.6,0.4,1,1,1s1-0.4,1-1v-3h3c0.6,0,1-0.4,1-1S16.6,11,16,11z"></path></svg></div></div><div class="items" data-v-1f69a7ed><!--[--><a class="VPLink link" href="/linux/linux%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/1%E7%AC%AC%E4%B8%80%E7%AB%A0%20Linux%20%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/%E7%AC%AC%E4%B8%80%E7%AB%A0%20Linux%20%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0.html" data-v-1f69a7ed data-v-f53f775e data-v-5704c677><!--[--><span class="link-text" data-v-f53f775e>第一章 Linux 入门概述</span><!--]--><!----></a><a class="VPLink link" href="/linux/linux%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/2%E7%AC%AC%E4%BA%8C%E7%AB%A0%20Linux%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2/%E7%AC%AC%E4%BA%8C%E7%AB%A0%20Linux%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2.html" data-v-1f69a7ed data-v-f53f775e data-v-5704c677><!--[--><span class="link-text" data-v-f53f775e>第二章 Linux虚拟机的安装部署</span><!--]--><!----></a><a class="VPLink link" href="/linux/linux%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/2%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%8B%93%E5%B1%95%20Linux%E9%98%BF%E9%87%8C%E4%BA%91ECS%E7%9A%84%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%8B%93%E5%B1%95%20Linux%E9%98%BF%E9%87%8C%E4%BA%91ECS%E7%9A%84%E5%AE%89%E8%A3%85%E9%83%A8%E7%BD%B2.html" data-v-1f69a7ed data-v-f53f775e data-v-5704c677><!--[--><span class="link-text" data-v-f53f775e>第二章 拓展 Linux阿里云ECS的安装部署</span><!--]--><!----></a><a class="VPLink link" href="/linux/linux%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/3%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%B8%B8%E8%A7%81Linux%E5%91%BD%E4%BB%A4/%E7%AC%AC%E4%B8%89%E7%AB%A0%20%E5%B8%B8%E8%A7%81Linux%E5%91%BD%E4%BB%A4.html" data-v-1f69a7ed data-v-f53f775e data-v-5704c677><!--[--><span class="link-text" data-v-f53f775e>第三章 常见Linux命令</span><!--]--><!----></a><a class="VPLink link" href="/linux/linux%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/4%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E7%94%9F%E4%BA%A7%E5%BC%80%E5%8F%91%E4%BD%BF%E7%94%A8%E6%89%A9%E5%B1%95/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91%E6%89%A9%E5%B1%95shell/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91%E6%89%A9%E5%B1%95shell.html" data-v-1f69a7ed data-v-f53f775e data-v-5704c677><!--[--><span class="link-text" data-v-f53f775e>第四章 大数据开发扩展shell</span><!--]--><!----></a><a class="VPLink link" href="/linux/linux%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/4%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E7%94%9F%E4%BA%A7%E5%BC%80%E5%8F%91%E4%BD%BF%E7%94%A8%E6%89%A9%E5%B1%95/java%E5%BC%80%E5%8F%91%E6%89%A9%E5%B1%95%E8%BD%AF%E4%BB%B6%E5%8C%85%E4%B8%8E%E5%AE%89%E8%A3%85/java%E5%BC%80%E5%8F%91%E6%89%A9%E5%B1%95%E8%BD%AF%E4%BB%B6%E5%8C%85%E4%B8%8E%E5%AE%89%E8%A3%85.html" data-v-1f69a7ed data-v-f53f775e data-v-5704c677><!--[--><span class="link-text" data-v-f53f775e>第四章 java开发扩展软件包与安装</span><!--]--><!----></a><!--]--></div></section></div><!--]--></nav></aside><div class="VPContent has-sidebar" id="VPContent" data-v-6b5fd0a9 data-v-a4c57a06><div class="VPDoc has-sidebar" data-v-a4c57a06 data-v-79ca2460><div class="container" data-v-79ca2460><div class="aside" data-v-79ca2460><div class="aside-curtain" data-v-79ca2460></div><div class="aside-container" data-v-79ca2460><div class="aside-content" data-v-79ca2460><div class="VPDocAside" data-v-79ca2460 data-v-779d834d><!--[--><!--]--><!--[--><!--]--><div class="VPDocAsideOutline has-outline" data-v-779d834d data-v-51e5a8ce><div class="content" data-v-51e5a8ce><div class="outline-marker" data-v-51e5a8ce></div><div class="outline-title" data-v-51e5a8ce>On this page</div><nav aria-labelledby="doc-outline-aria-label" data-v-51e5a8ce><span class="visually-hidden" id="doc-outline-aria-label" data-v-51e5a8ce> Table of Contents for current page </span><ul class="root" data-v-51e5a8ce><!--[--><li style="" data-v-51e5a8ce><a class="outline-link" href="#_3-1-系统预定义变量" data-v-51e5a8ce>3.1 系统预定义变量</a><!----></li><li style="" data-v-51e5a8ce><a class="outline-link" href="#_3-2-自定义变量" data-v-51e5a8ce>3.2 自定义变量</a><!----></li><li style="" data-v-51e5a8ce><a class="outline-link" href="#_3-3-特殊变量" data-v-51e5a8ce>3.3 特殊变量</a><!----></li><li style="" data-v-51e5a8ce><a class="outline-link" href="#_6-1-if判断" data-v-51e5a8ce>6.1 if判断</a><!----></li><li style="" data-v-51e5a8ce><a class="outline-link" href="#_6-2-case语句" data-v-51e5a8ce>6.2 case语句</a><!----></li><li style="" data-v-51e5a8ce><a class="outline-link" href="#_6-3-for循环" data-v-51e5a8ce>6.3 for循环</a><!----></li><li style="" data-v-51e5a8ce><a class="outline-link" href="#_6-4-while循环" data-v-51e5a8ce>6.4 while循环</a><!----></li><li style="" data-v-51e5a8ce><a class="outline-link" href="#_8-1-系统函数" data-v-51e5a8ce>8.1 系统函数</a><!----></li><li style="" data-v-51e5a8ce><a class="outline-link" href="#_8-2-自定义函数" data-v-51e5a8ce>8.2 自定义函数</a><!----></li><li style="" data-v-51e5a8ce><a class="outline-link" href="#_9-1-cut" data-v-51e5a8ce>9.1 cut</a><!----></li><li style="" data-v-51e5a8ce><a class="outline-link" href="#_9-2-awk" data-v-51e5a8ce>9.2 awk</a><!----></li><li style="" data-v-51e5a8ce><a class="outline-link" href="#_9-3-sort" data-v-51e5a8ce>9.3 sort</a><!----></li><li style="" data-v-51e5a8ce><a class="outline-link" href="#_9-4-wc" data-v-51e5a8ce>9.4 wc</a><!----></li><li style="" data-v-51e5a8ce><a class="outline-link" href="#_10-1-常规匹配" data-v-51e5a8ce>10.1 常规匹配</a><!----></li><li style="" data-v-51e5a8ce><a class="outline-link" href="#_10-2-常用特殊字符" data-v-51e5a8ce>10.2 常用特殊字符</a><!----></li><!--]--></ul></nav></div></div><!--[--><!--]--><div class="spacer" data-v-779d834d></div><!--[--><!--]--><!----><!--[--><!--]--><!--[--><!--]--></div></div></div></div><div class="content" data-v-79ca2460><div class="content-container" data-v-79ca2460><!--[--><!--]--><main class="main" data-v-79ca2460><div style="position:relative;" class="vp-doc _linux_linux%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0_4%E7%AC%AC%E5%9B%9B%E7%AB%A0%20%E7%94%9F%E4%BA%A7%E5%BC%80%E5%8F%91%E4%BD%BF%E7%94%A8%E6%89%A9%E5%B1%95_%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91%E6%89%A9%E5%B1%95shell_%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91%E6%89%A9%E5%B1%95shell" data-v-79ca2460><div><h1 id="大数据开发扩展shell" tabindex="-1">大数据开发扩展shell <a class="header-anchor" href="#大数据开发扩展shell" aria-hidden="true">#</a></h1><h1 id="学习目标" tabindex="-1">学习目标 <a class="header-anchor" href="#学习目标" aria-hidden="true">#</a></h1><p>1 熟悉shell脚本的原理和使用</p><p>2 熟悉shell的编程语法</p><h1 id="第一节-shell概述" tabindex="-1">第一节 Shell概述 <a class="header-anchor" href="#第一节-shell概述" aria-hidden="true">#</a></h1><p><img src="/assets/Snipaste_2023-11-20_14-17-49.b0d9cf6e.png" alt=""></p><p><strong>1</strong>）<strong>Linux提供的Shell解析器有：</strong></p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 ~]$ cat /etc/shells </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">/bin/sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">/sbin/nologin</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">/bin/dash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">/bin/tcsh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">/bin/csh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p><strong>2</strong>）<strong>bash和sh的关系</strong></p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 bin]$ ll | grep bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">-rwxr-xr-x. 1 root root 941880 5月  11 2016 bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">lrwxrwxrwx. 1 root root      4 5月  27 2017 sh -&gt; bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p><strong>3</strong>）<strong>Centos默认的解析器是bash</strong></p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 bin]$ echo $SHELL</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h1 id="第二节-shell脚本入门" tabindex="-1">第二节 Shell脚本入门 <a class="header-anchor" href="#第二节-shell脚本入门" aria-hidden="true">#</a></h1><p>（1）需求：创建一个Shell脚本，输出helloworld</p><p>（2）案例实操：</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ touch helloworld.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ vim helloworld.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">在helloworld.sh中输入如下内容</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#!/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo &quot;helloworld&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（3）脚本的常用执行方式</p><p>第一种：采用bash或sh+脚本的相对路径或绝对路径（不用赋予脚本+x权限）</p><p>​ sh+脚本的相对路径</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ sh helloworld.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">Helloworld</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>​ sh+脚本的绝对路径</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ sh /home/atguigu/datas/helloworld.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">helloworld</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>​ bash+脚本的相对路径</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ bash helloworld.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">Helloworld</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>​ bash+脚本的绝对路径</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ bash /home/atguigu/datas/helloworld.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">Helloworld</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>第二种：采用输入脚本的绝对路径或相对路径执行脚本（必须具有可执行权限+x）</p><p>（a）<a href="http://xn--helloworld-gn3p57x801r9clw28b.sh" target="_blank" rel="noopener noreferrer">首先要赋予helloworld.sh</a> 脚本的+x权限</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ chmod +x helloworld.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（b）执行脚本</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">相对路径</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ./helloworld.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">Helloworld</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">绝对路径</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ /home/atguigu/datas/helloworld.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">Helloworld</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>注意：第一种执行方法，本质是bash解析器帮你执行脚本，所以脚本本身不需要执行权限。第二种执行方法，本质是脚本需要自己执行，所以需要执行权限。</p><p>【了解】第三种：在脚本的路径前加上“.”或者 source</p><p>（a）有以下脚本</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ cat test.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#!/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">A=5</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo $A</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>(b) 分别使用sh，bash，./ 和 . 的方式来执行，结果如下：</p><div class="language-text"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ bash test.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ echo $A</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ sh test.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ echo $A</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ./test.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ echo $A</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ . test.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ echo $A</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">5</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>原因：</p><p>前三种方式都是在当前shell中打开一个子shell来执行脚本内容，当脚本内容结束，则子shell关闭，回到父shell中。</p><p>第四种，也就是使用在脚本路径前加“.”或者 source的方式，可以使脚本内容在当前shell里执行，而无需打开子shell！这也是为什么我们每次要修改完/etc/profile文件以后，需要source一下的原因。</p><p>开子shell与不开子shell的区别就在于，环境变量的继承关系，如在子shell中设置的当前变量，父shell是不可见的。</p><h1 id="第三节-变量" tabindex="-1">第三节 变量 <a class="header-anchor" href="#第三节-变量" aria-hidden="true">#</a></h1><h2 id="_3-1-系统预定义变量" tabindex="-1">3.1 系统预定义变量 <a class="header-anchor" href="#_3-1-系统预定义变量" aria-hidden="true">#</a></h2><p>1）常用系统变量</p><p>$HOME、$PWD、$SHELL、$USER等</p><p>2）<strong>案例实操</strong></p><p>（1）查看系统变量的值</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ echo $HOME</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">/home/atguigu</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（2）显示当前Shell中所有变量：set</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ set</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">BASH=/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">BASH_ALIASES=()</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">BASH_ARGC=()</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">BASH_ARGV=()</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h2 id="_3-2-自定义变量" tabindex="-1">3**.2** 自定义<strong>变量</strong> <a class="header-anchor" href="#_3-2-自定义变量" aria-hidden="true">#</a></h2><p>1）<strong>基本语法</strong></p><p>（1）定义变量：变量名=变量值，注意=号前后不能有空格</p><p>（2）撤销变量：unset 变量名</p><p>（3）声明静态变量：readonly变量，注意：不能unset</p><p>2）<strong>变量定义规则</strong></p><p>（1）变量名称可以由字母、数字和下划线组成，但是不能以数字开头，环境变量名建议大写。</p><p>（2）等号两侧不能有空格</p><p>（3）在bash中，变量默认类型都是字符串类型，无法直接进行数值运算。</p><p>（4）变量的值如果有空格，需要使用双引号或单引号括起来。</p><p>3）<strong>案例实操</strong></p><p>（1）定义变量A</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ A=5</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ echo $A</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">5</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（2）给变量A重新赋值</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ A=8</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ echo $A</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">8</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（3）撤销变量A</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ unset A</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ echo $A</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（4）声明静态的变量B=2，不能unset</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ readonly B=2</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ echo $B</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">2</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ B=9</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">-bash: B: readonly variable</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（5）在bash中，变量默认类型都是字符串类型，无法直接进行数值运算</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop102 ~]$ C=1+2</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop102 ~]$ echo $C</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">1+2</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（6）变量的值如果有空格，需要使用双引号或单引号括起来</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop102 ~]$ D=I love banzhang</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">-bash: world: command not found</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop102 ~]$ D=&quot;I love banzhang&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop102 ~]$ echo $D</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">I love banzhang</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（7）可把变量提升为全局环境变量，可供其他Shell程序使用</p><p>export 变量名</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ vim helloworld.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>在helloworld.sh文件中增加echo $B</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">#!/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo &quot;helloworld&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo $B</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ./helloworld.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">Helloworld</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>发现并没有打印输出变量B的值。</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ export B</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ./helloworld.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">helloworld</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">2</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h2 id="_3-3-特殊变量" tabindex="-1">3**.3** 特殊<strong>变量</strong> <a class="header-anchor" href="#_3-3-特殊变量" aria-hidden="true">#</a></h2><h3 id="_3-3-1-n" tabindex="-1">3.3.1 $n <a class="header-anchor" href="#_3-3-1-n" aria-hidden="true">#</a></h3><p>1）<strong>基本语法</strong></p><p>$n （功能描述：n为数字，$0代表该脚本名称，$1-$9代表第一到第九个参数，十以上的参数，十以上的参数需要用大括号包含，如${10}）</p><p>2）<strong>案例实操</strong></p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ touch parameter.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ vim parameter.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#!/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo &#39;==========$n==========&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo $0 </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo $1 </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo $2</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ chmod 777 parameter.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ./parameter.sh cls xz</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">==========$n==========</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">./parameter.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">cls</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">xz</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="_3-3-2" tabindex="-1">3.3.2 $# <a class="header-anchor" href="#_3-3-2" aria-hidden="true">#</a></h3><p>1）<strong>基本语法</strong></p><p>$# （功能描述：获取所有输入参数个数，常用于循环）。</p><p>2）<strong>案例实操</strong></p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ vim parameter.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#!/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo &#39;==========$n==========&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo $0 </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo $1 </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo $2</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo &#39;==========$#==========&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo $#</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ chmod 777 parameter.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ./parameter.sh cls xz</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">==========$n==========</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">./parameter.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">cls</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">xz</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">==========$#==========</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">2</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="_3-3-3-、" tabindex="-1">3.3.3 $*<strong>、$@</strong> <a class="header-anchor" href="#_3-3-3-、" aria-hidden="true">#</a></h3><p>1）<strong>基本语法</strong></p><p>$* （功能描述：这个变量代表命令行中所有的参数，$*把所有的参数看成一个整体）</p><p>$@ （功能描述：这个变量也代表命令行中所有的参数，不过$@把每个参数区分对待）</p><p>2）<strong>案例实操</strong></p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ vim parameter.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#!/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo &#39;==========$n==========&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo $0 </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo $1 </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo $2</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo &#39;==========$#==========&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo $#</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo &#39;==========$*==========&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo $*</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo &#39;==========$@==========&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo $@</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ./parameter.sh a b c d e f g</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">==========$n==========</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">./parameter.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">a</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">b</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">==========$#==========</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">7</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">==========$*==========</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">a b c d e f g</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">==========$@==========</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">a b c d e f g</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="_3-3-4-？" tabindex="-1">3.3.4 $<strong>？</strong> <a class="header-anchor" href="#_3-3-4-？" aria-hidden="true">#</a></h3><p>1）<strong>基本语法</strong></p><p>$？ （功能描述：最后一次执行的命令的返回状态。如果这个变量的值为0，证明上一个命令正确执行；如果这个变量的值为非0（具体是哪个数，由命令自己来决定），则证明上一个命令执行不正确了。）</p><p>2）<strong>案例实操</strong></p><p>判断helloworld.sh脚本是否正确执行</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ./helloworld.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">hello world</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ echo $?</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">0</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h1 id="第四节-运算符" tabindex="-1">第<strong>四节</strong> 运算符 <a class="header-anchor" href="#第四节-运算符" aria-hidden="true">#</a></h1><p>1）<strong>基本语法</strong></p><p>“$((运算式))”或“$[运算式]”</p><p>2）<strong>案例实操：</strong></p><p>计算（2+3）* 4的值</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]# S=$[(2+3)*4]</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]# echo $S</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h1 id="第五节-条件判断" tabindex="-1">第五节 条件判断 <a class="header-anchor" href="#第五节-条件判断" aria-hidden="true">#</a></h1><p>1）<strong>基本语法</strong></p><p>（1）test condition</p><p>（2）[ condition ]（注意condition前后要有空格）</p><p>注意：条件非空即为true，[ atguigu ]返回true，[ ] 返回false。</p><p>2）<strong>常用判断条件</strong></p><p>（1）两个整数之间比较</p><p>-eq 等于（equal） -ne 不等于（not equal）</p><p>-lt 小于（less than） -le 小于等于（less equal）</p><p>-gt 大于（greater than） -ge 大于等于（greater equal）</p><p>（2）按照文件权限进行判断</p><p>-r 有读的权限（read）</p><p>-w 有写的权限（write）</p><p>-x 有执行的权限（execute）</p><p>（3）按照文件类型进行判断</p><p>-e 文件存在（existence）</p><p>-f 文件存在并且是一个常规的文件（file）</p><p>-d 文件存在并且是一个目录（directory）</p><p>3）<strong>案例实操</strong></p><p>（1）23是否大于等于22</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ [ 23 -ge 22 ]</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ echo $?</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">0</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（2）helloworld.sh是否具有写权限</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ [ -w helloworld.sh ]</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ echo $?</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">0</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（3）/home/atguigu/cls.txt目录中的文件是否存在</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ [ -e /home/atguigu/cls.txt ]</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ echo $?</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">1</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（4）多条件判断（&amp;&amp; 表示前一条命令执行成功时，才执行后一条命令，|| 表示上一条命令执行失败后，才执行下一条命令）</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 ~]$ [ atguigu ] &amp;&amp; echo OK || echo notOK</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">OK</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ [ ] &amp;&amp; echo OK || echo notOK</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">notOK</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h1 id="第六节-流程控制（重点）" tabindex="-1">第<strong>六节 流程控制</strong>（重点） <a class="header-anchor" href="#第六节-流程控制（重点）" aria-hidden="true">#</a></h1><h2 id="_6-1-if判断" tabindex="-1">6.1 if判断 <a class="header-anchor" href="#_6-1-if判断" aria-hidden="true">#</a></h2><p>1）<strong>基本语法</strong></p><p>（1）单分支</p><p>if [ 条件判断式 ];then</p><p>​ 程序</p><p>fi</p><p>或者</p><p>if [ 条件判断式 ]</p><p>then</p><p>​ 程序</p><p>fi</p><p>（2）多分支</p><p>if [ 条件判断式 ]</p><p>then</p><p>​ 程序</p><p>elif [ 条件判断式 ]</p><p>then</p><p>​ 程序</p><p>else</p><p>​ 程序</p><p>fi</p><p>注意事项：</p><p>（1）[ 条件判断式 ]，中括号和条件判断式之间必须有空格</p><p>（2）if后要有空格</p><p>2）<strong>案例实操</strong></p><p>输入一个数字，如果是1，则输出banzhang zhen shuai，如果是2，则输出cls zhen mei，如果是其它，什么也不输出。</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ touch if.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ vim if.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#!/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">if [ $1 -eq 1 ]</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">then</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">       echo &quot;banzhang zhen shuai&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">elif [ $1 -eq 2 ]</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">then</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">       echo &quot;cls zhen mei&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">fi</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ chmod 777 if.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ./if.sh 1</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">banzhang zhen shuai</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h2 id="_6-2-case语句" tabindex="-1">6.2 case语句 <a class="header-anchor" href="#_6-2-case语句" aria-hidden="true">#</a></h2><p>1）<strong>基本语法</strong></p><p>case $变量名 in</p><p>&quot;值1&quot;）</p><p>​ 如果变量的值等于值1，则执行程序1</p><p>;;</p><p>&quot;值2&quot;）</p><p>​ 如果变量的值等于值2，则执行程序2</p><p>;;</p><p>​ …省略其他分支…</p><p>*）</p><p>​ 如果变量的值都不是以上的值，则执行此程序</p><p>;;</p><p>esac</p><p>注意事项：</p><p>（1）case行尾必须为单词“in”，每一个模式匹配必须以右括号“）”结束。</p><p>（2）双分号“;;”表示命令序列结束，相当于java中的break。</p><p>（3）最后的“*）”表示默认模式，相当于java中的default。</p><p>2）<strong>案例实操</strong></p><p>输入一个数字，如果是1，则输出banzhang，如果是2，则输出cls，如果是其它，输出renyao。</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ touch case.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ vim case.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">!/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">case $1 in</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">&quot;1&quot;)</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">        echo &quot;banzhang&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">;;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">&quot;2&quot;)</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">        echo &quot;cls&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">;;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">*)</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">        echo &quot;renyao&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">;;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">esac</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ chmod 777 case.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ./case.sh 1</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">1</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h2 id="_6-3-for循环" tabindex="-1">6.3 for循环 <a class="header-anchor" href="#_6-3-for循环" aria-hidden="true">#</a></h2><p>1）<strong>基本语法1</strong></p><p>for (( 初始值;循环控制条件;变量变化 ))</p><p>do</p><p>​ 程序</p><p>done</p><p>2）<strong>案例实操</strong></p><p>从1加到100</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ touch for1.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ vim for1.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#!/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">sum=0</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">for((i=0;i&lt;=100;i++))</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">do</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">        sum=$[$sum+$i]</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">done</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo $sum</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ chmod 777 for1.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ./for1.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">5050</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>3）<strong>基本语法2</strong></p><p>for 变量 in 值1 值2 值3…</p><p>do</p><p>​ 程序</p><p>done</p><p>4）<strong>案例实操</strong></p><p>（1）打印所有输入参数</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ touch for2.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ vim for2.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#!/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#打印数字</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">for i in cls mly wls</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">do</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">     echo &quot;ban zhang love $i&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">done</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ chmod 777 for2.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ./for2.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">ban zhang love cls</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">ban zhang love mly</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">ban zhang love wls</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（2）比较$*和$@区别</p><p>$*和$@都表示传递给函数或脚本的所有参数，不被双引号“”包含时，都以$1 $2 …$n的形式输出所有参数。</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ touch for3.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ vim for3.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#!/bin/bash </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo &#39;=============$*=============&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">for i in $*</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">do</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">      echo &quot;ban zhang love $i&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">done</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo &#39;=============$@=============&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">for j in $@</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">do      </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">      echo &quot;ban zhang love $j&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">done</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ chmod 777 for3.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ./for3.sh cls mly wls</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">=============$*=============</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">banzhang love cls</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">banzhang love mly</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">banzhang love wls</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">=============$@=============</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">banzhang love cls</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">banzhang love mly</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">banzhang love wls</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>当它们被双引号“”包含时，$*会将所有的参数作为一个整体，以“$1 $2 …$n”的形式输出所有参数；$@会将各个参数分开，以“$1” “$2”…“$n”的形式输出所有参数。</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ vim for4.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#!/bin/bash </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo &#39;=============$*=============&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">for i in &quot;$*&quot; </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#$*中的所有参数看成是一个整体，所以这个for循环只会循环一次 </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">do </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">       echo &quot;ban zhang love $i&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">done </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo &#39;=============$@=============&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">for j in &quot;$@&quot; </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#$@中的每个参数都看成是独立的，所以“$@”中有几个参数，就会循环几次 </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">do </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">       echo &quot;ban zhang love $j&quot; </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">done</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ chmod 777 for4.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ./for4.sh cls mly wls</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">=============$*=============</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">banzhang love cls mly wls</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">=============$@=============</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">banzhang love cls</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">banzhang love mly</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">banzhang love wls</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h2 id="_6-4-while循环" tabindex="-1">6.4 while循环 <a class="header-anchor" href="#_6-4-while循环" aria-hidden="true">#</a></h2><p>1）<strong>基本语法</strong></p><p>while [ 条件判断式 ]</p><p>do</p><p>​ 程序</p><p>done</p><p>2**）案例实操**</p><p>从1加到100</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ touch while.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ vim while.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#!/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">sum=0</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">i=1</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">while [ $i -le 100 ]</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">do</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">      sum=$[$sum+$i]</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">      i=$[$i+1]</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">done</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo $sum</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ chmod 777 while.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ./while.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">5050</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h1 id="第七节-read读取控制台输入" tabindex="-1">第<strong>七节</strong> read读取控制台输入 <a class="header-anchor" href="#第七节-read读取控制台输入" aria-hidden="true">#</a></h1><p>1）<strong>基本语法</strong></p><p>read (选项) (参数)</p><p>选项：</p><p>-p：指定读取值时的提示符；</p><p>-t：指定读取值时等待的时间（秒）。</p><p>参数</p><p>​ 变量：指定读取值的变量名</p><p>2）<strong>案例实操</strong></p><p>提示7秒内，读取控制台输入的名称</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ touch read.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ vim read.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#!/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">read -t 7 -p &quot;Enter your name in 7 seconds :&quot; NAME</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">echo $NAME</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ./read.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">Enter your name in 7 seconds : atguigu</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">atguigu</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h1 id="第八节-函数" tabindex="-1">第<strong>八节</strong> 函数 <a class="header-anchor" href="#第八节-函数" aria-hidden="true">#</a></h1><h2 id="_8-1-系统函数" tabindex="-1">8.1 系统函数 <a class="header-anchor" href="#_8-1-系统函数" aria-hidden="true">#</a></h2><h3 id="_8-1-1-basename" tabindex="-1">8.1.1 basename <a class="header-anchor" href="#_8-1-1-basename" aria-hidden="true">#</a></h3><p>1）<strong>基本语法</strong></p><p>basename [string / pathname] [suffix] （功能描述：basename命令会删掉所有的前缀包括最后一个（‘/’）字符，然后将字符串显示出来。</p><p>选项：</p><p>suffix为后缀，如果suffix被指定了，basename会将pathname或string中的suffix去掉。</p><p>2）<strong>案例实操</strong></p><p>截取该/home/atguigu/banzhang.txt路径的文件名称</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ basename /home/atguigu/banzhang.txt </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">banzhang.txt</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ basename /home/atguigu/banzhang.txt .txt</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">banzhang</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h3 id="_8-1-2-dirname" tabindex="-1">8.1.2 dirname <a class="header-anchor" href="#_8-1-2-dirname" aria-hidden="true">#</a></h3><p>1）<strong>基本语法</strong></p><p>​ dirname 文件绝对路径 （功能描述：从给定的包含绝对路径的文件名中去除文件名（非目录的部分），然后返回剩下的路径（目录的部分））</p><p>2）<strong>案例实操</strong></p><p>获取banzhang.txt文件的路径</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 ~]$ dirname /home/atguigu/banzhang.txt </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">/home/atguigu</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h2 id="_8-2-自定义函数" tabindex="-1">8.2 自定义函数 <a class="header-anchor" href="#_8-2-自定义函数" aria-hidden="true">#</a></h2><p>1）<strong>基本语法</strong></p><p>[ function ] funname[()]</p><p>{</p><p>​ Action;</p><p>​ [return int;]</p><p>}</p><p>2）<strong>经验技巧</strong></p><p>（1）必须在调用函数地方之前，先声明函数，shell脚本是逐行运行。不会像其它语言一样先编译。</p><p>（2）函数返回值，只能通过$?系统变量获得，可以显示加：return返回，如果不加，将以最后一条命令运行结果，作为返回值。return后跟数值n(0-255)</p><p>3）<strong>案例实操</strong></p><p>计算两个输入参数的和</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ touch fun.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ vim fun.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">#!/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">function sum()</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">{</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">    s=0</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">    s=$[$1+$2]</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">    echo &quot;$s&quot;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">}</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">read -p &quot;Please input the number1: &quot; n1;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">read -p &quot;Please input the number2: &quot; n2;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">sum $n1 $n2;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ chmod 777 fun.sh</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ./fun.sh </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">Please input the number1: 2</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">Please input the number2: 5</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">7</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h1 id="第九节-shell工具（重点）" tabindex="-1">第<strong>九节</strong> Shell<strong>工具（重点）</strong> <a class="header-anchor" href="#第九节-shell工具（重点）" aria-hidden="true">#</a></h1><h2 id="_9-1-cut" tabindex="-1">9.1 cut <a class="header-anchor" href="#_9-1-cut" aria-hidden="true">#</a></h2><p>cut的工作就是“剪”，具体的说就是在文件中负责剪切数据用的。cut 命令从文件的每一行剪切字节、字符和字段并将这些字节、字符和字段输出。</p><p>1）基本用法</p><p>cut [选项参数] filename</p><p>说明：默认分隔符是制表符</p><p>2）选项参数说明</p><table><thead><tr><th>选项参数</th><th>功能</th></tr></thead><tbody><tr><td>-f</td><td>列号，提取第几列</td></tr><tr><td>-d</td><td>分隔符，按照指定分隔符分割列，默认是制表符“\t”</td></tr><tr><td>-c</td><td>指定具体的字符</td></tr></tbody></table><p>3）案例实操</p><p>（1）数据准备</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ touch cut.txt</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ vim cut.txt</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">dong shen</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">guan zhen</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">wo  wo</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">lai  lai</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">le  le</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（2）切割cut.txt第一列</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ cut -d &quot; &quot; -f 1 cut.txt </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">dong</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">guan</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">wo</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">lai</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">le</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（3）切割cut.txt第二、三列</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ cut -d &quot; &quot; -f 2,3 cut.txt </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">shen</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">zhen</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> wo</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> lai</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;"> le</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（4）在cut.txt文件中切割出guan</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ cat cut.txt | grep &quot;guan&quot; | cut -d &quot; &quot; -f 1</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">guan</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（5）选取系统PATH变量值，第2个“：”开始后的所有路径：</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ echo $PATH</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/atguigu/.local/bin:/home/atguigu/bin</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ echo $PATH | cut -d &quot;:&quot; -f 3-</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">/usr/local/sbin:/usr/sbin:/home/atguigu/.local/bin:/home/atguigu/bin</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（6）切割ifconfig 后打印的IP地址</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ifconfig ens33 | grep netmask | cut -d &quot;i&quot; -f 2 | cut -d &quot; &quot; -f 2</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">192.168.6.101</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h2 id="_9-2-awk" tabindex="-1">9.2 awk <a class="header-anchor" href="#_9-2-awk" aria-hidden="true">#</a></h2><p>一个强大的文本分析工具，把文件逐行的读入，以空格为默认分隔符将每行切片，切开的部分再进行分析处理。</p><p>1）基本用法</p><p>awk [选项参数] ‘/pattern1/{action1} /pattern2/{action2}...’ filename</p><p>pattern：表示awk在数据中查找的内容，就是匹配模式</p><p>action：在找到匹配内容时所执行的一系列命令</p><p>2）<strong>选项参数说明</strong></p><table><thead><tr><th>选项参数</th><th>功能</th></tr></thead><tbody><tr><td>-F</td><td>指定输入文件折分隔符</td></tr><tr><td>-v</td><td>赋值一个用户定义变量</td></tr></tbody></table><p>3）案例实操</p><p>（1）数据准备</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ sudo cp /etc/passwd ./</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（2）搜索passwd文件以root关键字开头的所有行，并输出该行的第7列。</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ awk -F : &#39;/^root/{print $7}&#39; passwd </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（3）搜索passwd文件以root关键字开头的所有行，并输出该行的第1列和第7列，中间以“，”号分割。</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ awk -F : &#39;/^root/{print $1&quot;,&quot;$7}&#39; passwd </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">root,/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>注意：只有匹配了pattern的行才会执行action</p><p>（4）只显示/etc/passwd的第一列和第七列，以逗号分割，且在所有行前面添加列名user，shell在最后一行添加&quot;dahaige，/bin/zuishuai&quot;。</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ awk -F : &#39;BEGIN{print &quot;user, shell&quot;} {print $1&quot;,&quot;$7} END{print &quot;dahaige,/bin/zuishuai&quot;}&#39; passwd</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">user, shell</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">root,/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">bin,/sbin/nologin</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">。。。</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">atguigu,/bin/bash</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">dahaige,/bin/zuishuai</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>注意：BEGIN 在所有数据读取行之前执行；END 在所有数据执行之后执行。</p><p>（5）将passwd文件中的用户id增加数值1并输出</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ awk -v i=1 -F : &#39;{print $3+i}&#39; passwd</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">1</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">2</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">3</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">4</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>4**）awk的内置变量**</p><table><thead><tr><th>变量</th><th>说明</th></tr></thead><tbody><tr><td>FILENAME</td><td>文件名</td></tr><tr><td>NR</td><td>已读的记录数（行号）</td></tr><tr><td>NF</td><td>浏览记录的域的个数（切割后，列的个数）</td></tr></tbody></table><p>5）案例实操</p><p>（1）统计passwd文件名，每行的行号，每行的列数</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ awk -F : &#39;{print &quot;filename:&quot; FILENAME  &quot;,linenum:&quot; NR &quot;,col:&quot;NF}&#39; passwd </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">filename:passwd,linenum:1,col:7</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">filename:passwd,linenum:2,col:7</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">filename:passwd,linenum:3,col:7</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">。。。</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（2）查询ifconfig命令输出结果中的空行所在的行号</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ifconfig | awk &#39;/^$/{print NR}&#39;</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">9</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">18</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">26</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（3）切割IP</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ ifconfig ens33 | grep netmask | awk -F &quot;inet&quot; &#39;{print $2}&#39; | awk -F &quot; &quot; &#39;{print $1}&#39; </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">192.168.6.101</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h2 id="_9-3-sort" tabindex="-1">9.3 sort <a class="header-anchor" href="#_9-3-sort" aria-hidden="true">#</a></h2><p>sort命令是在Linux里非常有用，它将文件进行排序，并将排序结果标准输出。</p><p>1）基本语法</p><p>Sort (选项) (参数)</p><table><thead><tr><th>选项</th><th>说明</th></tr></thead><tbody><tr><td>-n</td><td>依照数值的大小排序</td></tr><tr><td>-r</td><td>以相反的顺序来排序</td></tr><tr><td>-t</td><td>设置排序时所用的分隔字符</td></tr><tr><td>-k</td><td>指定需要排序的列</td></tr></tbody></table><p>参数：指定待排序的文件列表</p><p>2）案例实操</p><p>（1）数据准备</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ touch sort.txt</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ vim sort.txt</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">bb:40:5.4</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">bd:20:4.2</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">xz:50:2.3</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">cls:10:3.5</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">ss:30:1.6</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>（2）按照“：”分割后的第三列倒序排序。</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ sort -t : -nrk 3  sort.txt </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">bb:40:5.4</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">bd:20:4.2</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">cls:10:3.5</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">xz:50:2.3</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">ss:30:1.6</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h2 id="_9-4-wc" tabindex="-1">9**.4 wc** <a class="header-anchor" href="#_9-4-wc" aria-hidden="true">#</a></h2><p>wc命令用来统计文件信息。利用wc指令我们可以计算文件的行数，字节数、字符数等。</p><p>1）基本语法</p><p>wc [选项参数] filename</p><table><thead><tr><th>选项参数</th><th>功能</th></tr></thead><tbody><tr><td>-l</td><td>统计文件行数</td></tr><tr><td>-w</td><td>统计文件的单词数</td></tr><tr><td>-m</td><td>统计文件的字符数</td></tr><tr><td>-c</td><td>统计文件的字节数</td></tr></tbody></table><p>2）案例实操</p><p>统计/etc/profile文件的行数、单词数、字节数！</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ wc -l /etc/profile </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ wc -w /etc/profile </span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span>
+<span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ wc -m /etc/profile</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><h1 id="第十节-正则表达式入门" tabindex="-1">第十节 正则表达式入门 <a class="header-anchor" href="#第十节-正则表达式入门" aria-hidden="true">#</a></h1><p>正则表达式使用单个字符串来描述、匹配一系列符合某个语法规则的字符串。在很多文本编辑器里，正则表达式通常被用来检索、替换那些符合某个模式的文本。在Linux中，grep，sed，awk等命令都支持通过正则表达式进行模式匹配。</p><h2 id="_10-1-常规匹配" tabindex="-1">1<strong>0.1</strong> 常规匹配 <a class="header-anchor" href="#_10-1-常规匹配" aria-hidden="true">#</a></h2><p>一串不包含特殊字符的正则表达式匹配它自己，例如：</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ cat /etc/passwd | grep atguigu</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>就会匹配所有包含atguigu的行</p><h2 id="_10-2-常用特殊字符" tabindex="-1">1<strong>0.2</strong> 常用特殊字符 <a class="header-anchor" href="#_10-2-常用特殊字符" aria-hidden="true">#</a></h2><p>1）特殊字符：<strong>^</strong></p><p>^ 匹配一行的开头，例如：</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ cat /etc/passwd | grep ^a</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>会匹配出所有以a开头的行</p><p>2）特殊字符：<strong>$</strong></p><p>$ 匹配一行的结束，例如</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ cat /etc/passwd | grep t$</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>会匹配出所有以t结尾的行</p><p>思考：^<strong>$</strong> 匹配什么？</p><p>3）特殊字符：<strong>.</strong></p><p>. 匹配一个任意的字符，例如</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ cat /etc/passwd | grep r..t</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>会匹配包含rabt,rbbt,rxdt,root等的所有行</p><p>4）特殊字符：*</p><ul><li>不单独使用，他和上一个字符连用，表示匹配上一个字符0次或多次，例如</li></ul><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ cat /etc/passwd | grep ro*t</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>会匹配rt, rot, root, rooot, roooot等所有行</p><p>思考：.* 匹配什么？</p><p>5）特殊字符：[ ]</p><p>[ ] 表示匹配某个范围内的一个字符，例如</p><p>[6,8]------匹配6或者8</p><p>[0-9]------匹配一个0-9的数字</p><p>[0-9]*------匹配任意长度的数字字符串</p><p>[a-z]------匹配一个a-z之间的字符</p><p>[a-z]* ------匹配任意长度的字母字符串</p><p>[a-c, e-f]-匹配a-c或者e-f之间的任意字符</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ cat /etc/passwd | grep r[a,b,c]*t</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>会匹配rt,rat, rbt, rabt, rbact,rabccbaaacbt等等所有行</p><p>6）特殊字符：\</p><p>\ 表示转义，并不会单独使用。由于所有特殊字符都有其特定匹配模式，当我们想匹配某一特殊字符本身时（例如，我想找出所有包含 &#39;$&#39; 的行），就会碰到困难。此时我们就要将转义字符和特殊字符连用，来表示特殊字符本身，例如</p><div class="language-"><span class="copy"></span><pre><code><span class="line"><span style="color:#A6ACCD;">[atguigu@hadoop101 datas]$ cat /etc/passwd | grep a\$b</span></span>
+<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div><p>就会匹配所有包含 a$b 的行。</p></div></div></main><footer class="VPDocFooter" data-v-79ca2460 data-v-04568844><div class="edit-info" data-v-04568844><div class="edit-link" data-v-04568844><a class="VPLink link edit-link-button" href="https://github.com/vuejs/vitepress/edit/main/docs/linux/linux基础笔记/4第四章 生产开发使用扩展/大数据开发扩展shell/大数据开发扩展shell.md" target="_blank" rel="noopener noreferrer" data-v-04568844 data-v-5704c677><!--[--><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="edit-link-icon" data-v-04568844><path d="M18,23H4c-1.7,0-3-1.3-3-3V6c0-1.7,1.3-3,3-3h7c0.6,0,1,0.4,1,1s-0.4,1-1,1H4C3.4,5,3,5.4,3,6v14c0,0.6,0.4,1,1,1h14c0.6,0,1-0.4,1-1v-7c0-0.6,0.4-1,1-1s1,0.4,1,1v7C21,21.7,19.7,23,18,23z"></path><path d="M8,17c-0.3,0-0.5-0.1-0.7-0.3C7,16.5,6.9,16.1,7,15.8l1-4c0-0.2,0.1-0.3,0.3-0.5l9.5-9.5c1.2-1.2,3.2-1.2,4.4,0c1.2,1.2,1.2,3.2,0,4.4l-9.5,9.5c-0.1,0.1-0.3,0.2-0.5,0.3l-4,1C8.2,17,8.1,17,8,17zM9.9,12.5l-0.5,2.1l2.1-0.5l9.3-9.3c0.4-0.4,0.4-1.1,0-1.6c-0.4-0.4-1.2-0.4-1.6,0l0,0L9.9,12.5z M18.5,2.5L18.5,2.5L18.5,2.5z"></path></svg> Edit this page on GitHub<!--]--><!----></a></div><!----></div><div class="prev-next" data-v-04568844><div class="pager" data-v-04568844><!----></div><div class="pager" data-v-04568844><a class="pager-link next" href="/linux/linux%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0/1%E7%AC%AC%E4%B8%80%E7%AB%A0%20Linux%20%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0/%E7%AC%AC%E4%B8%80%E7%AB%A0%20Linux%20%E5%85%A5%E9%97%A8%E6%A6%82%E8%BF%B0.html" data-v-04568844><span class="desc" data-v-04568844>Next page</span><span class="title" data-v-04568844>第一章 Linux 入门概述</span></a></div></div></footer><!--[--><!--]--></div></div></div></div></div><footer class="VPFooter has-sidebar" data-v-6b5fd0a9 data-v-5b331722><div class="container" data-v-5b331722><p class="message" data-v-5b331722>released under the MIT License</p><p class="copyright" data-v-5b331722>Copyright @ 2022 tmmaiyatang</p></div></footer><!--[--><!--]--></div></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"bookmark_technology-doc.md\":\"9dfdc2f3\",\"flutter_flutter-study.md\":\"b431e1fc\",\"flutter_flutter-study_keep-status.md\":\"f183d962\",\"flutter_flutter与h5页面的双向通信.md\":\"97138a07\",\"flutter_flutter搭建.md\":\"792cc805\",\"guide_20-utils.md\":\"2c22ee9e\",\"guide_algorithm.md\":\"23856013\",\"guide_cordova打包前端.md\":\"807a530f\",\"guide_directive.md\":\"ff4f1ec2\",\"guide_es-new.md\":\"aa4a215b\",\"guide_git.md\":\"3a4dba4b\",\"guide_github双重身份验证解决方案.md\":\"7cd8f8b8\",\"guide_installation.md\":\"1fe8618d\",\"guide_js-knowledge.md\":\"85801b95\",\"guide_nav-address-study.md\":\"4fa91c02\",\"guide_nav-address.md\":\"093f2386\",\"guide_network-note.md\":\"290dacda\",\"guide_quitestart.md\":\"e3eb977c\",\"guide_react-native搭建.md\":\"b2126c70\",\"guide_reg.md\":\"71164548\",\"guide_simple-axios.md\":\"94947137\",\"guide_test-component.md\":\"509153ce\",\"guide_tooldescription.md\":\"56eac7c8\",\"guide_实现分块获取数据xhr和fetch.md\":\"382cdea0\",\"guide_组件封装原则.md\":\"2dd256cd\",\"guide_遇到的问题解决方案.md\":\"87d0cfe0\",\"index.md\":\"1fe65a13\",\"linux_linux基础笔记_1第一章 linux 入门概述_第一章 linux 入门概述.md\":\"d36172d1\",\"linux_linux基础笔记_2第二章 linux虚拟机的安装部署_第二章 linux虚拟机的安装部署.md\":\"dd9a1b4c\",\"linux_linux基础笔记_2第二章拓展 linux阿里云ecs的安装部署_第二章拓展 linux阿里云ecs的安装部署.md\":\"549104ed\",\"linux_linux基础笔记_3第三章 常见linux命令_第三章 常见linux命令.md\":\"f569cebc\",\"linux_linux基础笔记_4第四章 生产开发使用扩展_java开发扩展软件包与安装_java开发扩展软件包与安装.md\":\"1e95d189\",\"linux_linux基础笔记_4第四章 生产开发使用扩展_大数据开发扩展shell_大数据开发扩展shell.md\":\"fd1ec4c0\",\"linux_linux零散知识点.md\":\"e22719dc\",\"mianshi_interviewer_htmlandcss.md\":\"a49094a4\",\"mianshi_interviewer_javascript.md\":\"0e913cf0\",\"mianshi_interviewer_readme.md\":\"5b01e456\",\"mianshi_interviewer_react.md\":\"d3fc8d32\",\"mianshi_interviewer_typescript.md\":\"87d1d73f\",\"mianshi_interviewer_vue.md\":\"e6672a38\",\"mianshi_interviewer_browser.md\":\"3ae2ce54\",\"mianshi_interviewer_computednet.md\":\"830abefb\",\"mianshi_interviewer_quitestart.md\":\"35965172\",\"mianshi_hunluan_browser-principle.md\":\"3141324b\",\"mianshi_hunluan_browser-principle.old.md\":\"98133556\",\"mianshi_hunluan_mianshi1.md\":\"ccb4b3e5\",\"mianshi_hunluan_mobile-delay-plan.md\":\"3d6b9a5d\",\"mianshi_hunluan_net-audition-subject.md\":\"eaaefdd5\",\"mianshi_hunluan_quitestart.md\":\"68298c94\",\"mianshi_hunluan_tujie-google-v8.md\":\"f35b99d6\",\"mianshi_hunluan_vue3企业级项目实战.md\":\"d8519596\",\"mianshi_hunluan_window-native.md\":\"23b0469c\",\"mianshi_hunluan_xss-crsf.md\":\"b94d28c8\",\"mianshi_hunluan_自己面试总结题.md\":\"8494ad7d\",\"mianshi_interviewer-yinke_high-frequency.md\":\"d1613f27\",\"mianshi_vue-interviewer_6.请说一下你对响应式数据的理解.md\":\"66abe588\",\"mianshi_vue-interviewer_7.vue 中如何检测数组变化.md\":\"f3593403\",\"mianshi_vue-interviewer_8..如何将 template 转换成 render 函数.md\":\"40a2fe9b\",\"mianshi_vue-interviewer_9.vue 中如何进行依赖收集.md\":\"5a67dd94\",\"node_common.md\":\"0b5cd613\",\"node_vm模块.md\":\"3ea6a8e2\",\"projects_vite_vue2.md\":\"c5b1f302\",\"react_reactrouter6快速上手.md\":\"d1f6bb6f\",\"react_react-hooks原理.md\":\"68d6231a\",\"react_react-question.md\":\"c65130d9\",\"react_react-study.md\":\"b031a7ad\",\"react_react中实现插槽.md\":\"ae15c3c7\",\"vue_code-edit.md\":\"d126e2a1\",\"vue_v-model在tsx中的写法.md\":\"8af81c93\",\"vue_vue.3.3新特性.md\":\"1763a653\",\"vue_vue中使用docxtemplater导出word.md\":\"f11ba2e1\",\"vue_vue相关.md\":\"efe83f21\"}")</script>
+    <script type="module" async src="/assets/app.580fb14e.js"></script>
+    
+  </body>
+</html>

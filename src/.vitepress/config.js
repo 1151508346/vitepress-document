@@ -13,7 +13,7 @@ const list = sync('src/mianshi/vue-interviewer/*.md',{
 })
 
 const vueInterviewerList = getMenuList(list).sort((a,b) => a.text[0] - b.text[0])
-console.log(vueInterviewerList,'vueInterviewerList')
+// console.log(vueInterviewerList,'vueInterviewerList')
 const logoPath = (logo) => {
   const { NODE_ENV } = process.env;
   let filePath = ''
@@ -34,7 +34,7 @@ const getBase = () => {
   }
   return ''
 }
-console.log(getBase(), 'getBase()')
+// console.log(getBase(), 'getBase()')
 export default {
   title: '首页',
   base: getBase() || '/vitepress-document/',

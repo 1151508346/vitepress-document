@@ -1,0 +1,1 @@
+import{_ as e,c as r,o as t}from"./app.580fb14e.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"mianshi/interviewer-yinke/high-frequency.md"}'),n={name:"mianshi/interviewer-yinke/high-frequency.md"};function a(i,c,s,o,h,p){return t(),r("div")}var d=e(n,[["render",a]]);export{m as __pageData,d as default};
