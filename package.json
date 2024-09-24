@@ -1,5 +1,6 @@
 {
     "devDependencies": {
+        "@pzy915/vitepress-plugin-search": "1.0.4-alpha.19-3",
         "glob": "^11.0.0",
         "unplugin-vue-define-options": "^0.11.0-alpha.0",
         "vite": "^3.0.9",
