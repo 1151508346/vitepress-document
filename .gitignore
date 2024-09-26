@@ -2,6 +2,7 @@ node_modules
 docs/.vitepress/dist.zip
 pnpm-lock.yaml
 
+netlifyBuild
 
 # Build and Release Folders
 bin-debug/
