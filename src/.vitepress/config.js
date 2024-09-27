@@ -74,7 +74,6 @@ export default {
       {
         text: '浏览器书签',
         link: '/bookmark/technology-doc.md'
-        
       },
       {
         text: 'Node',
@@ -92,7 +91,6 @@ export default {
           text:'flutter',
           link:'/flutter/flutter搭建.md'
       },
-      
       {
         text: 'linux',
         items: [

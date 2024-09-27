@@ -27,10 +27,6 @@ module.exports = [
       link: '/guide/nav-address.md'
     },
     {
-      text:'ES6-ES12所有特性详解',
-      link:'/guide/es-new.md'
-    },
-    {
       text:'珠峰计算机网络笔记',
       link:'/guide/network-note.md'
       
