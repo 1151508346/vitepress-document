@@ -7,7 +7,7 @@ hero:
   name: 前端工具和知识点记录
   text:
 
-  tagline: Hero subtitle
+  tagline: 有志者、事竟成
   image:
     src: /test-bg.png
     alt: VitePress
