@@ -584,7 +584,8 @@ Object.defineProperty(window, 'a', {
 console.log(a == 1 && a == 2 && a == 3) // true
 
 ```
-## 20、实现限制并发的Promise调度器
+## 20、实现限制并发的Promise调度器 （promise限流）
+- 方案1
 > 题目描述：JS 实现一个带并发限制的异步调度器 Scheduler，保证同时运行的任务最多有两个
 ```js
 // addTask(1000,"1");
@@ -652,8 +653,71 @@ addTask(500, "2");
 addTask(300, "3");
 addTask(400, "4");
 scheduler.taskStart();
-
 ```
+
+- 方案2
+> promise 限流,控制并发请求，最大有limit（限制）个请求同时发送
+```ts
+type Fn = () => Promise<any>
+interface Task {
+  fn: Fn,
+  resolve: (value: unknown) => void,
+  reject: (reason: unknown) => void
+}
+type TaskList = Task[];
+class TaskLimit {
+  count: number;
+  limit: number;
+  taskList: TaskList
+  constructor(limit: number) {
+    this.count = 0;
+    this.limit = limit;
+  }
+  wakeUp() {
+    if (this.count < this.limit && this.taskList.length > 0) {
+      const { fn, resolve, reject } = this.taskList.shift() as Task;
+      this.run(fn).then(resolve, reject)
+    }
+  }
+  run(fn: Fn): Promise<any> {
+    this.count++;
+    return fn().then(r => {
+      this.count--
+      this.wakeUp()
+      return r;
+    })
+  }
+
+  hold(fn: Fn): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.taskList.push({
+        fn,
+        resolve,
+        reject
+      })
+    })
+  }
+  load(fn: Fn) {
+    if (this.count < this.limit) {
+      return this.run(fn);
+    } else {
+      return this.hold(fn);
+    }
+  }
+
+  static start(list: Fn[], limit: number, cb?: Function): Promise<any> {
+    const taskInstance = new TaskLimit(limit);
+    return Promise.all(list.map((fn: Fn) => {
+      return taskInstance.load(fn)
+    })).then((r: any) => {
+      typeof cb === 'function' && cb(r)
+      return r
+    })
+  }
+}
+```
+
+
 ## 21、实现lazyMan函数
 
 > 题目描述： 
