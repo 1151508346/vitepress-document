@@ -1,4 +1,4 @@
-# react-native 开发调试
+# react-native 开发调试工具
 
 ## 1、安装 react-devtools
 
@@ -12,11 +12,11 @@ npm install -g react-devtools
 >
 > ![image-20240928153107689](/assets/react-native开发调试/image-20240928153107689.png)
 
-## 3、打开开发者菜单
+## 3、打开开发者菜单(上面窗口必须聚焦，点击一下上面窗口即可)
 
 方案 1. 使用 shift + d
 
-方案 2. d
+方案 2. 按键d
 
 方案 3. adb shell input keyevent 82 (手机不同可能吊不起来开发者菜单)
 
