@@ -17,5 +17,9 @@ module.exports = [
   },{
     text:'简易版react-hooks原理',
     link: '/react/react-hooks原理.md'
+  },
+  {
+    text:'react-native开发调试工具',
+    link: '/react/react-native开发调试.md'
   }
 ]
