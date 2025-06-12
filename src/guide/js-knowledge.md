@@ -1957,3 +1957,98 @@ const r = isHappyNumber(48) // false
 // const r = isHappyNumber(19)  //true
 console.log(r,'r')
 ```
+## 67、最长递增子序列
+```js
+function lengthOfLIS(nums) {
+  if (nums.length === 0) return 0;
+
+  const tails = [];
+  tails[0] = nums[0];
+
+  for (let i = 1; i < nums.length; i++) {
+    let len = tails.length
+    if (nums[i] > tails[len - 1]) {
+      tails.push(nums[i])
+      continue;
+    }
+     // 使用二分查找找到第一个大于等于nums[i]的位置
+      let left = 0;
+      let right = len - 1;
+      let pos = -1;
+
+      while (left <= right) {
+        const mid = Math.floor((left + right) / 2);
+        if (tails[mid] >= nums[i]) {
+          pos = mid;
+          right = mid - 1;
+        } else {
+          left = mid + 1;
+        }
+      }
+
+      if (pos !== -1) {
+        tails[pos] = nums[i];
+      }
+  }
+  return tails.length;
+}
+
+// 如果需要返回实际的LIS序列，可以稍作修改
+function getLIS(nums) {
+  if (nums.length === 0) return [];
+
+  const tails = [];
+  const prevIndices = new Array(nums.length).fill(-1);
+  const indices = [];
+
+  tails[0] = 0;
+  let len = 1;
+
+
+  for (let i = 1; i < nums.length; i++) {
+    let lastIndex = len - 1
+    if (nums[i] > nums[tails[lastIndex]]) {
+      prevIndices[i] = tails[lastIndex];
+      tails[len] = i;
+      len++;
+    } else {
+      let left = 0;
+      let right = len - 1;
+      // let pos = -1;
+
+      while (left <= right) {
+        const mid = Math.floor((left + right) / 2);
+        if (nums[tails[mid]] >= nums[i]) {
+          // pos = mid;
+          right = mid  - 1;
+        } else {
+          left = mid + 1 ;
+        }
+      }
+
+      // if (pos !== -1) {
+        if (left > 0) {
+          prevIndices[i] = tails[left - 1];
+        }
+        tails[left] = i;
+      // }
+    }
+  }
+  // console.log(prevIndices.toString())
+
+  // console.log(tails.toString())
+  // 构建LIS序列
+  const lis = [];
+  let current = tails[len - 1];
+  for (let i = 0; i < len; i++) {
+    lis.unshift(nums[current]);
+    current = prevIndices[current];
+  }
+
+  return lis;
+}
+
+const nums = [10, 9, 2,   3,1, 5, 7, 101, 18];
+console.log(lengthOfLIS(nums)); // 输出: 5 (最长子序列是 [2, 3, 5,  7, 18])
+console.log(getLIS(nums));     // 输出: [2, 3, 5, 7, 18]
+```
