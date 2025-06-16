@@ -54,20 +54,19 @@
 > ![2fa-validate](/assets//github-2FA/2fa-validate.png)
 
 ## 14.最新恢复码
-
-- 26e0e-5417d 
-- 9fb64-74900 
-- 553b2-b4a53 
-- 2659f-c9082 
-- 25263-e1f1f 
-- 94f74-10d11 
-- 25cdb-2e438 
-- 78c7d-15936 
-- 9b2da-9c289 
-- 94ec8-f190a 
-- 98daf-ffff1 
-- 37904-140f7 
-- 7e70b-1e434 
-- a1b1f-ab9cd 
-- 09020-00282 
-- f48f3-c1816 
+- 2f298-bbb16 
+- 015fc-d428f 
+- 8b8bd-ad336 
+- 3f0b2-08370 
+- 252fa-dd038 
+- cbdd9-804c0 
+- 2b5fe-3ac09 
+- 0c83f-f2f11 
+- 86748-7c41f 
+- 0aeef-78554 
+- a31fc-be2ef 
+- d51b1-fde0e 
+- 9412f-7dc29 
+- 8d6d2-1ebea 
+- 366ec-b3a22 
+- 9486d-388ff
