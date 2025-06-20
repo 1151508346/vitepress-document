@@ -66,6 +66,10 @@ module.exports = [
     {
       text:'react-native搭建',
       link:'/guide/react-native搭建.md'
+    },
+    {
+      text:'pnpm搭建monorepo环境',
+      link:'/guide/pnpm-readme.md'
     }
     
     
