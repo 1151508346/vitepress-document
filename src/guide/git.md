@@ -14,7 +14,17 @@
 ![](/assets/git/share_26993c9d139df49a0d16a3664581004f.png)
 ![](/assets/git/share_4d99131f4aad0e286abf61093e392521.png)
 
+## git 获取当前分支
+> 例如当前分支是test
 
+
+| 命令 | 输出示例 | 说明 |
+|----|----|----|
+|git rev-parse --abbrev-ref HEAD |	test                |	获取当前分支名（简称）|
+|git symbolic-ref --short HEAD   |	test                |	同上，等价于 --abbrev-ref|
+|git symbolic-ref HEAD           |	refs/heads/test|	获取完整分支引用路径|
+|git rev-parse HEAD              |	560d82eb475831aeb2b16cfca5f512e6225210b7|	获取当前 HEAD 指向的提交哈希(完整)|
+|git rev-parse --short HEAD      | 560d82e |	获取当前 HEAD 指向的提交哈希（简短7位）|
 
 
 
