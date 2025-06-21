@@ -26,6 +26,22 @@
 |git rev-parse HEAD              |	560d82eb475831aeb2b16cfca5f512e6225210b7|	获取当前 HEAD 指向的提交哈希(完整)|
 |git rev-parse --short HEAD      | 560d82e |	获取当前 HEAD 指向的提交哈希（简短7位）|
 
+## vscode中被git托管之后 新增，修改、删除代码指示器的样式
+
+1. ctrl+shfit+p 
+2. 输入 Preferences: Open Settings (JSON)
+
+> 打开.settting.json
+
+  ```json
+  "workbench.colorCustomizations": {
+      "gitDecoration.untrackedResourceForeground": "#00FF00", // 未跟踪资源的颜色  （ 例如：新增加的文件）
+      "gitDecoration.ignoredResourceForeground": "#ddd", // 忽略资源的颜色 .gitIgnore中增加的文件
+      "editorGutter.modifiedBackground": "#FFA500", // 编辑器内修改行标记的颜色
+      "editorGutter.addedBackground": "#00ff00",// 编辑器内添加行标记的颜色
+      "editorGutter.deletedBackground": "#FF4500", // 编辑器内删除行标记的颜色
+    }
+  ```
 
 
 
