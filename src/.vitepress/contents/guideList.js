@@ -63,13 +63,14 @@ module.exports = [
       text:'实现分块获取数据xhr和fetch',
       link:'/guide/实现分块获取数据xhr和fetch.md'
     },
-    {
-      text:'react-native搭建',
-      link:'/guide/react-native搭建.md'
-    },
+
     {
       text:'pnpm搭建monorepo环境',
       link:'/guide/pnpm-readme.md'
+    },
+    {
+      text:'vite 搭建模块联邦',
+      link:'/guide/vite 搭建模块联邦.md'
     }
     
     

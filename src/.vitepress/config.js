@@ -7,12 +7,12 @@ const interviewerList = require('./contents/interviewerList')
 const vueList = require('./contents/vueList');
 const reactList = require('./contents/reactList');
 const { getMenuList } = require('./contents/utils')
-const {glob, sync} = require('glob');
-const list = sync('src/mianshi/vue-interviewer/*.md',{
+const { glob, sync } = require('glob');
+const list = sync('src/mianshi/vue-interviewer/*.md', {
   ignore: 'node_modules/**'
 })
 
-const vueInterviewerList = getMenuList(list).sort((a,b) => a.text[0] - b.text[0])
+const vueInterviewerList = getMenuList(list).sort((a, b) => a.text[0] - b.text[0])
 // console.log(vueInterviewerList,'vueInterviewerList')
 const logoPath = (logo) => {
   const { NODE_ENV } = process.env;
@@ -69,7 +69,7 @@ export default {
       },
       {
         text: '项目搭建',
-        link: '/projects/vite_vue2.md'
+        link: '/projects/vite_vue2'
       },
       {
         text: '浏览器书签',
@@ -88,8 +88,8 @@ export default {
         link: '/react/react中实现插槽.md'
       },
       {
-          text:'flutter',
-          link:'/flutter/flutter搭建.md'
+        text: 'flutter',
+        link: '/flutter/flutter搭建.md'
       },
       {
         text: 'linux',
@@ -123,7 +123,8 @@ export default {
           items: guideList,
         }
       ],
-      '/bookmark':[
+
+      '/bookmark': [
         {
           text: '浏览器书签',
           collapsible: true,
@@ -194,7 +195,7 @@ export default {
               text: '第四章 java开发扩展软件包与安装',
               link: 'linux/linux基础笔记/4第四章 生产开发使用扩展/java开发扩展软件包与安装/java开发扩展软件包与安装.md'
             }
-            
+
           ]
         }
       ],
@@ -210,14 +211,14 @@ export default {
           ]
         }
       ],
-      '/flutter':[
+      '/flutter': [
         {
           text: 'flutter',
           collapsible: true,
           items: [
             {
-              text:'flutter搭建',
-              link:'/flutter/flutter搭建.md'
+              text: 'flutter搭建',
+              link: '/flutter/flutter搭建.md'
             },
             {
               text: 'flutter与h5页面的双向通信',
@@ -227,7 +228,7 @@ export default {
               text: 'flutter学习',
               link: '/flutter/flutter-study.md'
             },
-           
+
           ]
         }
       ],
@@ -241,6 +242,10 @@ export default {
               text: 'vite+vue2环境搭建',
               link: '/projects/vite_vue2.md'
             },
+            {
+              text: 'react-native搭建',
+              link: '/projects/react-native搭建.md'
+            }
 
           ],
         }
@@ -267,7 +272,7 @@ export default {
           items: vueInterviewerList
         }
       ],
-      
+
     }
   }
 }
