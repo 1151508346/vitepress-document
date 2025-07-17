@@ -21,5 +21,13 @@ module.exports = [
   {
     text:'react-native开发调试工具',
     link: '/react/react-native开发调试.md'
+  },
+  {
+    text: 'react-native 踩坑解决方案',
+    link: '/react/react-native-question.md'
+  },
+  {
+    text:'react-native使用',
+    link: '/react/react-native-use.md'
   }
 ]
