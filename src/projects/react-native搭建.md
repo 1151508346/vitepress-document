@@ -46,7 +46,7 @@
   变量名:ANDROID_HOME
   变量值:D:\Program Files\android_sdk
   ```
-  **备注** 上面是我电脑SDK路径，参考即可
+  **备注:** 上面是我电脑SDK路径，参考即可
 
   - 将ANDROID_HOME配置到系统的path路径中
   ```
@@ -56,12 +56,14 @@
   %ANDROID_HOME%\tools\bin
   %ANDROID_HOME%\cmdline-tools\bin
   ```
-  1. 配置gradle
+  1. 配置gradle 
   - 在电脑的环境环境变量中创建ANDROID_HOME
   ```
   变量名:GRADLE_USER_HOME
   变量值:D:\Program Files\gradle-8.0.1
   ```
+  > **下载的依赖包会下载到该“D:\Program Files\gradle-8.0.1”路径下**
+
    **备注** 上面是我电脑gradle路径，参考即可
 
    - 将GRADLE_USER_HOME配置到系统的path路径中
@@ -73,12 +75,17 @@
 ## 3. 创建项目
   - 创建最新项目
   ```
-    react-native init rnApp
+    npx @react-native-community/cli init AwesomeProject --version X.XX.X
+    # react-native init rnApp // 此命令被废弃了
   ```
   - 创建指定版本的项目
-  > 例如：创建指定本版本0.72.6的项目
+  > 例如：创建指定本版本0.80.2的项目
+
+  
   ```cmd
-    react-native init rnApp --version 0.72.6 
+  
+    npx @react-native-community/cli init AwesomeProject --version 0.80.2
+    #react-native init rnApp --version 0.80.2 // 此命令被废弃了
   ```
 
   - 项目目录结构
