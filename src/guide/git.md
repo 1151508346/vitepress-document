@@ -42,6 +42,10 @@
       "editorGutter.deletedBackground": "#FF4500", // 编辑器内删除行标记的颜色
     }
   ```
+  ## 配置本地git的ssh
+  ``` sh
+  ssh-keygen -t rsa -b 4096 -C "1151508346@qq.com"
+  ```
 
 
 
