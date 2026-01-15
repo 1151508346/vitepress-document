@@ -29,5 +29,9 @@ module.exports = [
   {
     text:'react-native使用',
     link: '/react/react-native-use.md'
+  },
+  {
+    text:'react打开docx',
+    link:'/react/react打开docx.md'
   }
 ]
