@@ -7,10 +7,16 @@
    > 目前react-native要求下载jdk11版本 （这块使用的react-naitve版本是0.72.7 在后面创建项目的 package.json中有说明）。
   3. Android Studio
   4. 下载gradle 
-    - 下载地址：
-     1. https://blog.csdn.net/ii950606/article/details/109105402
-     2. https://services.gradle.org/distributions/
+
+  - 下载地址：
+    1. https://blog.csdn.net/ii950606/article/details/109105402
+    2. https://services.gradle.org/distributions/
    > 两个下载地址认选一个，推荐使用第一个，第一个块，但是第一个不全，第二个是官方的下载地址，包含了gradle的所有版本。
+
+  - 镜像下载地址
+    1. https://mirrors.cloud.tencent.com/gradle/ #腾讯镜像
+    2. https://mirrors.aliyun.com/macports/distfiles/gradle/ #阿里云镜像
+
 
    > gradle下载版本8.0.1 在后面创建的项目中的gradle-wrapper.properties文件中有，如果您指定了react-native的版本的话gradle的下载版本要按照项目中所依赖的版本去下载。
 ## 2. 环境变量配置
