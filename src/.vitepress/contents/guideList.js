@@ -71,6 +71,10 @@ module.exports = [
     {
       text:'vite 搭建模块联邦',
       link:'/guide/vite 搭建模块联邦.md'
+    },
+    {
+      text:'CryptoJS加密详解问答',
+      link:'/guide/cryptojs.md'
     }
     
     
